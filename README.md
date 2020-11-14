@@ -140,5 +140,5 @@ Contributions are welcome! ♥! Please share any features, and add unit tests! U
 </p>
 
 <p align="center">
-  <img width="500" height="174" src="https://github.com/GDGSNF/Athena/blob/main/img/OWASP-logo.png">
+  <img width="480" height="480" src="https://github.com/GDGSNF/Athena/blob/main/img/Logo.png">
 </p>
