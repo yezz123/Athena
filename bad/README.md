@@ -62,10 +62,10 @@ This is an old attack method, but it's still effective and popular with hackers.
 In computer security, authentication is the process of attempting to verify the digital identity of the sender of a communication. A common example of such a process is the log on process. Testing the authentication schema means understanding how the authentication process works and using that information to circumvent the authentication mechanism.
 ```
 # Reference :
-- Cross-Site Scripting (XSS) : https://owasp.org/www-community/attacks/xss/
-- SQL Injection : https://owasp.org/www-community/attacks/SQL_Injection
-- Cross Site Request Forgery (CSRF) : https://owasp.org/www-community/attacks/csrf
-- Session Impersonation : https://www.netsparker.com/blog/web-security/session-hijacking/
-- Insecure Deserialization : https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization
-- Authentication Bruteforce : https://www.kaspersky.com/resource-center/definitions/brute-force-attack
-- Authentication Bypass : https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/04-Testing_for_Bypassing_Authentication_Schema
+- [Cross-Site Scripting (XSS)]( https://owasp.org/www-community/attacks/xss/)
+- [SQL Injection]( https://owasp.org/www-community/attacks/SQL_Injection)
+- [Cross Site Request Forgery (CSRF)](https://owasp.org/www-community/attacks/csrf)
+- [Session Impersonation](https://www.netsparker.com/blog/web-security/session-hijacking/)
+- [Insecure Deserialization](https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization)
+- [Authentication Bruteforce](https://www.kaspersky.com/resource-center/definitions/brute-force-attack)
+- [Authentication Bypass](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/04-Testing_for_Bypassing_Authentication_Schema)
