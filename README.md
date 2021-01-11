@@ -125,9 +125,9 @@ Contributions are welcome! ♥! Please share any features, and add unit tests! U
 
 - Contact me here :
 <p align="center">
-	<a href="https://www.instagram.com/froggy__19/">
+	<!---<a href="https://www.instagram.com/froggy__19/">
   <code><img src="https://img.shields.io/badge/Froggy__19%20-%23E4405F.svg?&style=for-the-badge&logo=Instagram&logoColor=white"/></code>
-		</a>
+		</a>-->
 	<a href="https://www.twitch.tv/yassertahiri">
   <code><img src="https://img.shields.io/badge/yassertahiri%20-%239146FF.svg?&style=for-the-badge&logo=Twitch&logoColor=white"/></code>
 	</a>
