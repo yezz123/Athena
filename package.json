@@ -1,0 +1,27 @@
+{
+  "name": "athena",
+  "version": "2.0.0",
+  "description": "Athena is a web application developed in python / flask / SQLite that has two faces.",
+  "main": "setup.py",
+  "scripts": {
+    "test": "./setup.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yezz123/Athena.git"
+  },
+  "keywords": [
+    "python",
+    "web",
+    "Application",
+    "SQLite",
+    "Flask",
+    "Athena"
+  ],
+  "author": "Yezz123",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yezz123/Athena/issues"
+  },
+  "homepage": "https://github.com/yezz123/Athena#readme"
+}

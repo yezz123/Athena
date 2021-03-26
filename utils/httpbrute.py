@@ -4,7 +4,6 @@ import click
 import requests
 import logging
 
-
 @click.command()
 @click.argument('url')
 @click.argument('username')
@@ -27,7 +26,6 @@ def http_brute(url, username, password_file, success_string, verbose):
         if success_string in response.text:
             print('cracked!', username, password)
             break
-
 
 if __name__ == '__main__':
     http_brute()

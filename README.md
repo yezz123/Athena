@@ -1,14 +1,14 @@
 <p align="center">
-  <img width="480" height="480" src="https://github.com/GDGSNF/Athena/blob/main/img/Athena-Logo.png">
+  <img width="480" height="480" src="https://github.com/yezz123/Athena/blob/main/img/Athena-Logo.png">
 </p>
 <p align="center">
    <img src="https://img.shields.io/badge/Dev-Yezz123-green?style"/>
    <img src="https://img.shields.io/badge/language-python-blue?style"/>
-   <img src="https://img.shields.io/github/license/GDGSNF/Athena"/>
-   <img src="https://img.shields.io/github/stars/GDGSNF/Athena"/>
-   <img src="https://img.shields.io/github/forks/GDGSNF/Athena"/>
+   <img src="https://img.shields.io/github/license/yezz123/Athena"/>
+   <img src="https://img.shields.io/github/stars/yezz123/Athena"/>
+   <img src="https://img.shields.io/github/forks/yezz123/Athena"/>
    <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
-   <img src="https://visitor-badge.laobi.icu/badge?page_id=GDGSNF.Pretty-Readme">
+   <img src="https://visitor-badge.laobi.icu/badge?page_id=yezz123.Pretty-Readme">
 </p>
 
 # Athena 🌙
@@ -39,7 +39,7 @@ Athena is a web application developed in [Python](https://www.python.org/) / [Fl
 ```
 - Then Clone the project into your directory :
 ```  
-      git clone https://github.com/GDGSNF/Athena.git
+      git clone https://github.com/yezz123/Athena.git
       
       cd Athena
       
@@ -91,7 +91,7 @@ Or :
 - SSL/TLS Server
 
 
-## [Vulnerabilities](https://github.com/GDGSNF/Athena/blob/main/bad/README.md) 🔥
+## [Vulnerabilities](https://github.com/GDGSNF/yezz123/blob/main/bad/README.md) 🔥
 
 Some of the vulnerabilities present on the "BAD" version:
 
@@ -117,9 +117,12 @@ After database initialization, three users are created:
  
 You can login with any user, the application doesn't have a permissions system, so, the three have the same permissions.
 
-## Contributing ⭐
+## [Contributing](https://github.com/yezz123/Athena/blob/main/CONTRIBUTING.md) ⭐
 
 Contributions are welcome! ♥! Please share any features, and add unit tests! Use the pull request and issue systems to contribute.
+
+## Disclaimer:
+This project can only be used for educational purposes. Using this software against target systems without prior permission is illegal, and any damages from misuse of this software will not be the responsibility of the author.
 
 ## Credits & Thanks 🏆
 <p align="center">
