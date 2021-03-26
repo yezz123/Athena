@@ -56,7 +56,7 @@ Athena is a web application developed in [Python](https://www.python.org/) / [Fl
 
    - And the key will be registred and you can run now Athena!
     
-### Take care!!
+### Take care 🩸
 
 - If you found a key or a registry id that devel@kali not the creator report on issues or contact Me :
 - Exemple of key :
