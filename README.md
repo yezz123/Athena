@@ -17,7 +17,7 @@
 
 # Athena 🌙
 
-Athena is a web application developed in [Python](https://www.python.org/) / [Flask](https://flask.palletsprojects.com/en/1.1.x/) / [SQLite](https://www.sqlite.org/index.html) that has two faces.
+Athena is a web application developed in [Python](https://www.python.org/) / [Flask](https://flask.palletsprojects.com/en/1.1.x/) / [SQLite](https://www.sqlite.org/index.html) that has two faces. [Read more ....](https://yassertahiri.medium.com/story-of-athena-59f950017a0c)
 
 **GOOD**: Tries to code with secure development best practices in mind.
 
@@ -28,8 +28,6 @@ Athena is a web application developed in [Python](https://www.python.org/) / [Fl
   The "GOOD" version (not finished yet) will comply with the [OWASP ASVS:](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
 
   This will permit learn how to develop python code following the best security practices.
-
-
 
 ## Installation 💼
 
