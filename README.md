@@ -119,6 +119,145 @@ After database initialization, three users are created:
  
 You can login with any user, the application doesn't have a permissions system, so, the three have the same permissions.
 
+```bash
+
+.
+├── bad
+│   ├── api_list.py
+│   ├── api_post.py
+│   ├── Athena.py
+│   ├── Athena-ssl.py
+│   ├── brute.py
+│   ├── csp.txt
+│   ├── db_init.py
+│   ├── db.py
+│   ├── libapi.py
+│   ├── libmfa.py
+│   ├── libposts.py
+│   ├── libsession.py
+│   ├── libuser.py
+│   ├── mod_api.py
+│   ├── mod_csp.py
+│   ├── mod_hello.py
+│   ├── mod_mfa.py
+│   ├── mod_posts.py
+│   ├── mod_user.py
+│   ├── payloads
+│   │   ├── cookie.js
+│   │   ├── hello.html
+│   │   ├── keylogger.js
+│   │   └── payload.js
+│   ├── README.md
+│   ├── static
+│   │   ├── background.png
+│   │   ├── background.xcf
+│   │   ├── font-awesome.min.css
+│   │   └── w3.css
+│   └── templates
+│       ├── csp.html
+│       ├── footer.html
+│       ├── head.html
+│       ├── messages.html
+│       ├── mfa.disable.html
+│       ├── mfa.enable.html
+│       ├── navbar.html
+│       ├── posts.view.html
+│       ├── user.chpasswd.html
+│       ├── user.create.html
+│       ├── user.login.html
+│       ├── user.login.mfa.html
+│       └── welcome.html
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── good
+│   ├── Athena.py
+│   ├── Athena-ssl.py
+│   ├── bad-passwords.txt
+│   ├── csp.txt
+│   ├── cutpasswd.py
+│   ├── db_init.py
+│   ├── GeoLite2-Country.mmdb
+│   ├── httpbrute.py
+│   ├── leaked_passwords.txt
+│   ├── libapi.py
+│   ├── libmfa.py
+│   ├── libposts.py
+│   ├── libsession.py
+│   ├── libuser.py
+│   ├── mod_api.py
+│   ├── mod_csp.py
+│   ├── mod_hello.py
+│   ├── mod_mfa.py
+│   ├── mod_posts.py
+│   ├── mod_user.py
+│   ├── mod_welcome1.py
+│   ├── payloads
+│   │   ├── cookie.js
+│   │   ├── hello.html
+│   │   ├── keylogger.js
+│   │   └── payload.js
+│   ├── static
+│   │   ├── background.png
+│   │   ├── background.xcf
+│   │   ├── font-awesome.min.css
+│   │   └── w3.css
+│   └── templates
+│       ├── csp.html
+│       ├── footer.html
+│       ├── head.html
+│       ├── messages.html
+│       ├── mfa.disable.html
+│       ├── mfa.enable.html
+│       ├── navbar.html
+│       ├── posts.view.html
+│       ├── user.chpasswd.html
+│       ├── user.create.html
+│       ├── user.login.html
+│       ├── user.login.mfa.html
+│       └── welcome.html
+├── img
+│   ├── Athena-Logo.png
+│   ├── Logo.png
+│   └── OWASP-logo.png
+├── install.sh
+├── LICENSE
+├── MANIFEST.in
+├── OWASP.Application.Security.Verification.Standard.4.0.2-en.csv
+├── package.json
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+├── SECURITY.md
+├── setup.cfg
+├── setup.py
+├── tox.ini
+└── utils
+    ├── aes-decrypt.py
+    ├── aes-encrypt.py
+    ├── ca-create.py
+    ├── ca-csr-create.py
+    ├── ca-csr-load.py
+    ├── crack-cvv.py
+    ├── crack-hash.py
+    ├── fernet-generate-key.py
+    ├── generate_bad_passwords.py
+    ├── hashfile.py
+    ├── hmac_generate.py
+    ├── httpbrute.py
+    ├── luncheck.py
+    ├── passwords.txt
+    ├── rsa-decrypt.py
+    ├── rsa-encrypt.py
+    ├── rsa-keygen.py
+    ├── rsa-sign.py
+    ├── rsa-verify.py
+    ├── scrypt-crack.py
+    ├── scrypt-generate.py
+    ├── scrypt-verify.py
+    └── skey.py
+
+```
+
 ## [Contributing](https://github.com/yezz123/Athena/blob/main/CONTRIBUTING.md) ⭐
 
 Contributions are welcome! ♥! Please share any features, and add unit tests! Use the pull request and issue systems to contribute.
