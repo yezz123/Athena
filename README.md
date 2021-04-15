@@ -266,7 +266,7 @@ Contributions are welcome! ♥! Please share any features, and add unit tests! U
 This project can only be used for educational purposes. Using this software against target systems without prior permission is illegal, and any damages from misuse of this software will not be the responsibility of the author.
 
 <div align="right">
-    <b><a href="#Athena">↥ Back To Top</a></b>
+    <b><a href="#athena-">↥ Back To Top</a></b>
 </div>
 
 ## Credits & Thanks 🏆
