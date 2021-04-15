@@ -265,12 +265,16 @@ Contributions are welcome! ♥! Please share any features, and add unit tests! U
 ## Disclaimer 👾
 This project can only be used for educational purposes. Using this software against target systems without prior permission is illegal, and any damages from misuse of this software will not be the responsibility of the author.
 
+<div align="right">
+    <b><a href="#Athena">↥ Back To Top</a></b>
+</div>
+
 ## Credits & Thanks 🏆
 <p align="center">
     <a href="https://yassertahiri.medium.com/">
     <img alt="Medium" src="https://img.shields.io/badge/Medium%20-%23000000.svg?&style=for-the-badge&logo=Medium&logoColor=white"/></a>
     <a href="https://twitter.com/THyasser1">
     <img alt="Twitter" src="https://img.shields.io/badge/Twitter%20-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white"</a>
-    <a href="https://discord.gg/crNvkTYPYG">
+    <a href="https://discord.gg/2x32TdfB57">
     <img alt="Discord" src="https://img.shields.io/badge/Discord%20-%237289DA.svg?&style=for-the-badge&logo=discord&logoColor=white"/></a>
 </p>
