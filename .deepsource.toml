@@ -1,0 +1,19 @@
+version = 1
+exclude_patterns = [
+ "utils/**"
+]
+test_patterns = [
+  "install.sh",
+  "setup.py",
+  "bad/**",
+  "good/**"
+]
+
+[[analyzers]]
+name = "python"
+enabled = true
+dependency_file_paths = [
+  "requirements.txt",
+  "pyproject.toml",
+  "tox.ini"
+]
