@@ -20,7 +20,7 @@ except binascii.Error:
 
 backend = default_backend()
 
-#print(hexlify(key).decode())
+# print(hexlify(key).decode())
 
 # verify
 kdf = Scrypt(

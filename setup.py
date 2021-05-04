@@ -10,7 +10,7 @@ def readme():
 
 setuptools.setup(
     name="Athena",
-    version="2.0",
+    version="2.0.0",
     author="yezz123",
     author_email="yasserth19@protonmail.com",
     description="Athena is a web application developed in python / flask / SQLite that has two faces.",
