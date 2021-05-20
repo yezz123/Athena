@@ -122,109 +122,110 @@ You can login with any user, the application doesn't have a permissions system, 
 ```bash
 
 .
+├── athena.toml
 ├── bad
-│   ├── api_list.py
-│   ├── api_post.py
-│   ├── Athena.py
-│   ├── Athena-ssl.py
-│   ├── brute.py
-│   ├── csp.txt
-│   ├── db_init.py
-│   ├── db.py
-│   ├── libapi.py
-│   ├── libmfa.py
-│   ├── libposts.py
-│   ├── libsession.py
-│   ├── libuser.py
-│   ├── mod_api.py
-│   ├── mod_csp.py
-│   ├── mod_hello.py
-│   ├── mod_mfa.py
-│   ├── mod_posts.py
-│   ├── mod_user.py
-│   ├── payloads
-│   │   ├── cookie.js
-│   │   ├── hello.html
-│   │   ├── keylogger.js
-│   │   └── payload.js
-│   ├── README.md
-│   ├── static
-│   │   ├── background.png
-│   │   ├── background.xcf
-│   │   ├── font-awesome.min.css
-│   │   └── w3.css
-│   └── templates
-│       ├── csp.html
-│       ├── footer.html
-│       ├── head.html
-│       ├── messages.html
-│       ├── mfa.disable.html
-│       ├── mfa.enable.html
-│       ├── navbar.html
-│       ├── posts.view.html
-│       ├── user.chpasswd.html
-│       ├── user.create.html
-│       ├── user.login.html
-│       ├── user.login.mfa.html
-│       └── welcome.html
+│   ├── api_list.py
+│   ├── api_post.py
+│   ├── Athena.py
+│   ├── Athena-ssl.py
+│   ├── brute.py
+│   ├── csp.txt
+│   ├── db_init.py
+│   ├── db.py
+│   ├── libapi.py
+│   ├── libmfa.py
+│   ├── libposts.py
+│   ├── libsession.py
+│   ├── libuser.py
+│   ├── mod_api.py
+│   ├── mod_csp.py
+│   ├── mod_hello.py
+│   ├── mod_mfa.py
+│   ├── mod_posts.py
+│   ├── mod_user.py
+│   ├── payloads
+│   │   ├── cookie.js
+│   │   ├── hello.html
+│   │   ├── keylogger.js
+│   │   └── payload.js
+│   ├── README.md
+│   ├── static
+│   │   ├── background.png
+│   │   ├── background.xcf
+│   │   ├── font-awesome.min.css
+│   │   └── w3.css
+│   └── templates
+│       ├── csp.html
+│       ├── footer.html
+│       ├── head.html
+│       ├── messages.html
+│       ├── mfa.disable.html
+│       ├── mfa.enable.html
+│       ├── navbar.html
+│       ├── posts.view.html
+│       ├── user.chpasswd.html
+│       ├── user.create.html
+│       ├── user.login.html
+│       ├── user.login.mfa.html
+│       └── welcome.html
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
+├── Dockerfile
 ├── good
-│   ├── Athena.py
-│   ├── Athena-ssl.py
-│   ├── bad-passwords.txt
-│   ├── csp.txt
-│   ├── cutpasswd.py
-│   ├── db_init.py
-│   ├── GeoLite2-Country.mmdb
-│   ├── httpbrute.py
-│   ├── leaked_passwords.txt
-│   ├── libapi.py
-│   ├── libmfa.py
-│   ├── libposts.py
-│   ├── libsession.py
-│   ├── libuser.py
-│   ├── mod_api.py
-│   ├── mod_csp.py
-│   ├── mod_hello.py
-│   ├── mod_mfa.py
-│   ├── mod_posts.py
-│   ├── mod_user.py
-│   ├── mod_welcome1.py
-│   ├── payloads
-│   │   ├── cookie.js
-│   │   ├── hello.html
-│   │   ├── keylogger.js
-│   │   └── payload.js
-│   ├── static
-│   │   ├── background.png
-│   │   ├── background.xcf
-│   │   ├── font-awesome.min.css
-│   │   └── w3.css
-│   └── templates
-│       ├── csp.html
-│       ├── footer.html
-│       ├── head.html
-│       ├── messages.html
-│       ├── mfa.disable.html
-│       ├── mfa.enable.html
-│       ├── navbar.html
-│       ├── posts.view.html
-│       ├── user.chpasswd.html
-│       ├── user.create.html
-│       ├── user.login.html
-│       ├── user.login.mfa.html
-│       └── welcome.html
+│   ├── Athena.py
+│   ├── Athena-ssl.py
+│   ├── bad-passwords.txt
+│   ├── csp.txt
+│   ├── cutpasswd.py
+│   ├── db_init.py
+│   ├── GeoLite2-Country.mmdb
+│   ├── httpbrute.py
+│   ├── leaked_passwords.txt
+│   ├── libapi.py
+│   ├── libmfa.py
+│   ├── libposts.py
+│   ├── libsession.py
+│   ├── libuser.py
+│   ├── mod_api.py
+│   ├── mod_csp.py
+│   ├── mod_hello.py
+│   ├── mod_mfa.py
+│   ├── mod_posts.py
+│   ├── mod_user.py
+│   ├── mod_welcome1.py
+│   ├── payloads
+│   │   ├── cookie.js
+│   │   ├── hello.html
+│   │   ├── keylogger.js
+│   │   └── payload.js
+│   ├── static
+│   │   ├── background.png
+│   │   ├── background.xcf
+│   │   ├── font-awesome.min.css
+│   │   └── w3.css
+│   └── templates
+│       ├── csp.html
+│       ├── footer.html
+│       ├── head.html
+│       ├── messages.html
+│       ├── mfa.disable.html
+│       ├── mfa.enable.html
+│       ├── navbar.html
+│       ├── posts.view.html
+│       ├── user.chpasswd.html
+│       ├── user.create.html
+│       ├── user.login.html
+│       ├── user.login.mfa.html
+│       └── welcome.html
 ├── img
-│   ├── Athena-Logo.png
-│   ├── Logo.png
-│   └── OWASP-logo.png
+│   ├── Athena-Logo.png
+│   ├── Logo.png
+│   └── OWASP-logo.png
 ├── install.sh
 ├── LICENSE
 ├── MANIFEST.in
 ├── OWASP.Application.Security.Verification.Standard.4.0.2-en.csv
 ├── package.json
-├── athena.toml
 ├── README.md
 ├── requirements.txt
 ├── SECURITY.md
@@ -255,7 +256,6 @@ You can login with any user, the application doesn't have a permissions system, 
     ├── scrypt-generate.py
     ├── scrypt-verify.py
     └── skey.py
-
 ```
 
 ## [Contributing](https://github.com/yezz123/Athena/blob/main/CONTRIBUTING.md) ⭐
