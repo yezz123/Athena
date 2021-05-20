@@ -1,21 +1,12 @@
 # syntax=docker/dockerfile:1
-FROM python:3.7-alpine
 
-#create the work dir
-WORKDIR /code
+FROM python:3.8-slim-buster
 
-#create the env
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
+WORKDIR /app
 
-#run the apk add
-RUN \
- apk add --no-cache python3 && \
- apk add --no-cache --virtual .build-deps gcc python3-dev musl-dev 
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
-RUN pip install -r requirements.txt
 COPY . .
 
-#run the main files.
-EXPOSE 5000
-CMD ["flask", "run"]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
