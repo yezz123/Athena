@@ -224,7 +224,7 @@ You can login with any user, the application doesn't have a permissions system, 
 ├── MANIFEST.in
 ├── OWASP.Application.Security.Verification.Standard.4.0.2-en.csv
 ├── package.json
-├── pyproject.toml
+├── athena.toml
 ├── README.md
 ├── requirements.txt
 ├── SECURITY.md
