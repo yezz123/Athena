@@ -16,8 +16,8 @@ from cryptography.hazmat.primitives import hashes
 @click.argument('message')
 def aes_encrypt(key, message):
 
-    #key = sys.argv[1].encode()
-    #plain = sys.argv[2].encode()
+    key = sys.argv[1].encode()
+    plain = sys.argv[2].encode()
     iv = os.urandom(16)
 
     digest = hashes.Hash(hashes.SHA256(), backend=default_backend())
