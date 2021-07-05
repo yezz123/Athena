@@ -1,4 +1,3 @@
-import sqlite3
 from flask import Blueprint, render_template, redirect, request, g, session
 
 from lib.posts1 import get_posts, post
@@ -25,17 +24,9 @@ def do_post():
 
     if request.method == 'POST':
 
-        username = session['username'] #request.form.get('username')
+        username = session['username']
         text = request.form.get('text')
 
         post(username, text)
 
-        #password = request.form.get('password')
-
-        #session['username'] = login(username, password)
-
-        #if session['username']:
-        #    return redirect('/')
-
-    return redirect('/') #render_template('login.html')
-
+    return redirect('/')

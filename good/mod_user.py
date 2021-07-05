@@ -1,4 +1,3 @@
-import sqlite3
 from flask import Blueprint, render_template, redirect, request, g, session, make_response, flash
 import libuser
 import libsession
@@ -21,16 +20,18 @@ def do_login():
         username = libuser.login(username, password)
 
         if not username:
-            flash("Invalid user or password");
+            flash("Invalid user or password")
             return render_template('user.login.mfa.html')
 
         if libmfa.mfa_is_enabled(username):
             if not libmfa.mfa_validate(username, otp):
-                flash("Invalid OTP");
+                flash("Invalid OTP")
                 return render_template('user.login.mfa.html')
 
         response = make_response(redirect('/'))
-        response = libsession.create(request=request, response=response, username=username)
+        response = libsession.create(request=request,
+                                     response=response,
+                                     username=username)
         return response
 
     return render_template('user.login.mfa.html')
@@ -79,10 +80,11 @@ def do_chpasswd_post():
         return render_template('user.chpasswd.html')
 
     if not libuser.is_password_allowed(new_password):
-        flash("The password don't comply our requirements, please, choose another one.")
+        flash(
+            "The password don't comply our requirements, please, choose another one."
+        )
         return render_template('user.chpasswd.html')
 
     libuser.password_set(g.session['username'], new_password)
     return redirect('/')
     flash("Password changed")
-

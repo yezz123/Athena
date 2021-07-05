@@ -8,7 +8,8 @@ from time import time
 from pathlib import Path
 
 secret = 'MYSUPERSECRETKEY'
-not_after = 60 # 1 minute
+not_after = 60
+
 
 def keygen(username, password=None, login=True):
 
@@ -17,11 +18,14 @@ def keygen(username, password=None, login=True):
             return None
 
     now = time()
-    token = jwt.encode({
-        'username': username,
-        'nbf': now,
-        'exp': now + not_after
-        }, secret, algorithm='HS256').decode()
+    token = jwt.encode(
+        {
+            'username': username,
+            'nbf': now,
+            'exp': now + not_after
+        },
+        secret,
+        algorithm='HS256').decode()
 
     return token
 
@@ -48,4 +52,3 @@ def authenticate(request):
         return None
 
     return decoded['username']
-

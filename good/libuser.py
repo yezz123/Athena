@@ -1,4 +1,3 @@
-
 import hashlib
 import os
 import sqlite3
@@ -19,37 +18,29 @@ def login(username, password, **kwargs):
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
 
-    user = c.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
+    user = c.execute("SELECT * FROM users WHERE username = ?",
+                     (username, )).fetchone()
 
     if not user:
-        #print('The user doesnt exists')
         return False
 
     backend = default_backend()
 
-    kdf = Scrypt(
-        salt=unhexlify(user['salt']),
-        length=32,
-        n=2**14,
-        r=8,
-        p=1,
-        backend=backend
-    )
+    kdf = Scrypt(salt=unhexlify(user['salt']),
+                 length=32,
+                 n=2**14,
+                 r=8,
+                 p=1,
+                 backend=backend)
 
     try:
         kdf.verify(password.encode(), unhexlify(user['password']))
-        #print('valid')
         return username
     except InvalidKey:
-        #print('invalid1')
         return False
     except Exception as e:
-        #print('invalid2', e)
         return False
-
-    #print('No deberia haber llegado aca')
     return False
-
 
 
 def user_create(username, password=None):
@@ -58,12 +49,12 @@ def user_create(username, password=None):
     conn.set_trace_callback(print)
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
-    c.execute("INSERT INTO users (username, password, salt, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%s', '%d', '%d', '%s')" %(username, '', '', 0, 0, ''))
+    c.execute(
+        "INSERT INTO users (username, password, salt, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%s', '%d', '%d', '%s')"
+        % (username, '', '', 0, 0, ''))
     conn.commit()
-
     if password:
         password_set(username, password)
-
     return True
 
 
@@ -72,14 +63,7 @@ def password_set(username, password):
     backend = default_backend()
     salt = os.urandom(16)
 
-    kdf = Scrypt(
-        salt=salt,
-        length=32,
-        n=2**14,
-        r=8,
-        p=1,
-        backend=backend
-    )
+    kdf = Scrypt(salt=salt, length=32, n=2**14, r=8, p=1, backend=backend)
 
     key = kdf.derive(password.encode())
 
@@ -89,7 +73,8 @@ def password_set(username, password):
     c = conn.cursor()
 
     print('Changing password for', username)
-    c.execute("UPDATE users SET password = ?, salt = ? WHERE username = ?", (hexlify(key).decode(), hexlify(salt).decode(), username))
+    c.execute("UPDATE users SET password = ?, salt = ? WHERE username = ?",
+              (hexlify(key).decode(), hexlify(salt).decode(), username))
     conn.commit()
 
 
@@ -105,7 +90,7 @@ def userlist():
     if not users:
         return []
     else:
-        return [ user['username'] for user in users ]
+        return [user['username'] for user in users]
 
 
 def password_change(username, old_password, new_password):

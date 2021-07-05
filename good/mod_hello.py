@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect
+from flask import Blueprint
 
 mod_hello = Blueprint('mod_hello', __name__, template_folder='templates')
 

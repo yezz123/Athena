@@ -18,4 +18,3 @@ with open('/tmp/darkweb2017-top10000.txt') as f:
             continue
 
         print(password)
-

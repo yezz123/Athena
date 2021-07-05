@@ -5,25 +5,30 @@ import libposts
 import libapi
 from jsonschema import validate, ValidationError
 
-
 mod_api = Blueprint('mod_api', __name__, template_folder='templates')
 
 key_schema = {
-    "type" : "object",
-    "required": [ "username", "password" ],
-    "properties" : {
-        "username" : {"type" : "string", "pattern": "^[a-z]+$"},
-        "password" : {"type" : "string"},
+    "type": "object",
+    "required": ["username", "password"],
+    "properties": {
+        "username": {
+            "type": "string",
+            "pattern": "^[a-z]+$"
+        },
+        "password": {
+            "type": "string"
+        },
     },
     "additionalProperties": False,
 }
 
-
 post_schema = {
-    "type" : "object",
-    "required": [ "text" ],
-    "properties" : {
-        "text" : {"type" : "string"},
+    "type": "object",
+    "required": ["text"],
+    "properties": {
+        "text": {
+            "type": "string"
+        },
     },
     "additionalProperties": False,
 }
@@ -63,5 +68,3 @@ def do_post_create():
 
     print(request.get_json())
     return "You are awesome! Post created."
-
-
