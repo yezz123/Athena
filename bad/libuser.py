@@ -15,8 +15,7 @@ def login(username, password):
 
     if user:
         return user['username']
-    else:
-        return False
+    return False
 
 
 def create(username, password):
@@ -43,8 +42,7 @@ def userlist():
 
     if not users:
         return []
-    else:
-        return [user['username'] for user in users]
+    return [user['username'] for user in users]
 
 
 def password_change(username, password):

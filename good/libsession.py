@@ -50,8 +50,7 @@ def load(request):
 
     if country == getcountry(request.remote_addr):
         return {'username': username, 'country': country}
-    else:
-        return {}
+    return {}
 
 
 def destroy(response):

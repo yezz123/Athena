@@ -89,8 +89,7 @@ def userlist():
 
     if not users:
         return []
-    else:
-        return [user['username'] for user in users]
+    return [user['username'] for user in users]
 
 
 def password_change(username, old_password, new_password):

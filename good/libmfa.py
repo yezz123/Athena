@@ -16,8 +16,7 @@ def mfa_is_enabled(username):
 
     if user:
         return True
-    else:
-        return False
+    return False
 
 
 def mfa_disable(username):
@@ -60,8 +59,7 @@ def mfa_get_secret(username):
 
     if user:
         return user['mfa_secret']  #True
-    else:
-        return False
+    return False
 
 
 def mfa_reset_secret(username):
@@ -87,5 +85,4 @@ def mfa_validate(username, otp):
 
     if secret and totp.verify(otp):
         return True
-    else:
-        return False
+    return False

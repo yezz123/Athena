@@ -47,8 +47,7 @@ def do_key_create():
 
     if key:
         return jsonify({'key': key}), 200
-    else:
-        return jsonify({'error': 'invalid login'}), 200
+    return jsonify({'error': 'invalid login'}), 200
 
 
 @mod_api.route('/post/<username>', methods=['GET'])
