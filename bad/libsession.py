@@ -27,4 +27,3 @@ def load(request):
 def destroy(response):
     response.set_cookie('Athena_session', '', expires=0)
     return response
-

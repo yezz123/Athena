@@ -41,9 +41,11 @@ if csp:
 def do_home():
     return redirect('/posts')
 
+
 @app.before_request
 def before_request():
     g.session = libsession.load(request)
+
 
 @app.after_request
 def add_csp_headers(response):

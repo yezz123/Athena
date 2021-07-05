@@ -34,4 +34,3 @@ def authenticate(request):
         return f.name.split('.')[2]
 
     return None
-

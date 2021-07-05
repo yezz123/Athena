@@ -18,7 +18,10 @@ def do_view(username=None):
     posts = libposts.get_posts(username)
     users = libuser.userlist()
 
-    return render_template('posts.view.html', posts=posts, username=username, users=users)
+    return render_template('posts.view.html',
+                           posts=posts,
+                           username=username,
+                           users=users)
 
 
 @mod_posts.route('/', methods=['POST'])
@@ -35,4 +38,3 @@ def do_create():
         libposts.post(username, text)
 
     return redirect('/')
-

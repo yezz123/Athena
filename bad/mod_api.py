@@ -1,28 +1,32 @@
-from flask import Blueprint, render_template, redirect, request, g, session, make_response, flash, jsonify
+from flask import Blueprint, request, jsonify
 import libuser
 import libsession
 import libposts
 import libapi
 from jsonschema import validate, ValidationError
 
-
 mod_api = Blueprint('mod_api', __name__, template_folder='templates')
 
 key_schema = {
-    "type" : "object",
-    "required": [ "username", "password" ],
-    "properties" : {
-        "username" : {"type" : "string"},
-        "password" : {"type" : "string"},
+    "type": "object",
+    "required": ["username", "password"],
+    "properties": {
+        "username": {
+            "type": "string"
+        },
+        "password": {
+            "type": "string"
+        },
     },
 }
 
-
 post_schema = {
-    "type" : "object",
-    "required": [ "text" ],
-    "properties" : {
-        "text" : {"type" : "string"},
+    "type": "object",
+    "required": ["text"],
+    "properties": {
+        "text": {
+            "type": "string"
+        },
     },
 }
 
@@ -54,7 +58,7 @@ def do_post_list(username):
 @mod_api.route('/post', methods=['POST'])
 def do_post_create():
 
-    data = { 'username' : libapi.authenticate(request) }
+    data = {'username': libapi.authenticate(request)}
 
     if not data['username']:
         return jsonify({'error': 'invalid authentication'}), 401
@@ -68,5 +72,3 @@ def do_post_create():
 
     libposts.post(data['username'], data['text'])
     return "You are awesome! Post created."
-
-

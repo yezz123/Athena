@@ -5,6 +5,7 @@ import requests
 
 api_key_file = Path('/tmp/supersecret.txt')
 
+
 @click.command()
 @click.argument('message')
 def cmd_api_client(message):
@@ -13,12 +14,17 @@ def cmd_api_client(message):
         username = click.prompt('Username')
         password = click.prompt('Password', hide_input=True)
 
-        r = requests.post('http://127.0.1.1:5000/api/key', json={'username':username, 'password':password})
+        r = requests.post('http://127.0.1.1:5000/api/key',
+                          json={
+                              'username': username,
+                              'password': password
+                          })
 
         if r.status_code != 200:
-            click.echo('Invalid authentication or other error ocurred. Status code: {}'.format(r.status_code))
+            click.echo(
+                'Invalid authentication or other error ocurred. Status code: {}'
+                .format(r.status_code))
             return False
-
 
         api_key = r.json()['key']
         print('Received key:', api_key)
@@ -27,7 +33,9 @@ def cmd_api_client(message):
             outfile.write(api_key)
 
     api_key = api_key_file.open().read()
-    r = requests.post('http://127.0.1.1:5000/api/post', json={'text':message}, headers={'X-APIKEY': api_key})
+    r = requests.post('http://127.0.1.1:5000/api/post',
+                      json={'text': message},
+                      headers={'X-APIKEY': api_key})
     print(r.text)
 
 

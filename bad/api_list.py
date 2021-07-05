@@ -3,6 +3,7 @@ from pathlib import Path
 import click
 import requests
 
+
 @click.command()
 @click.argument('username')
 def cmd_api_client(username):

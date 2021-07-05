@@ -18,8 +18,8 @@ passwords = [
 ]
 
 for password in passwords:
-    result = subprocess.run([program, username, password], stdout=subprocess.DEVNULL)
+    result = subprocess.run([program, username, password],
+                            stdout=subprocess.DEVNULL)
     if result.returncode == 0:
         print("cracked! user: {} password: {}".format(username, password))
         break
-

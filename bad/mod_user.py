@@ -20,12 +20,12 @@ def do_login():
         username = libuser.login(username, password)
 
         if not username:
-            flash("Invalid user or password");
+            flash("Invalid user or password")
             return render_template('user.login.mfa.html')
 
         if libmfa.mfa_is_enabled(username):
             if not libmfa.mfa_validate(username, otp):
-                flash("Invalid OTP");
+                flash("Invalid OTP")
                 return render_template('user.login.mfa.html')
 
         response = make_response(redirect('/'))
@@ -44,7 +44,6 @@ def do_create():
 
         username = request.form.get('username')
         password = request.form.get('password')
-        #email = request.form.get('password')
         if not username or not password:
             flash("Please, complete username and password")
             return render_template('user.create.html')
@@ -52,12 +51,6 @@ def do_create():
         libuser.create(username, password)
         flash("User created. Please login.")
         return redirect('/user/login')
-
-        #session['username'] = libuser.login(username, password)
-
-        #if session['username']:
-        #    return redirect('/')
-
     return render_template('user.create.html')
 
 
@@ -77,8 +70,7 @@ def do_chpasswd():
             flash("The password don't comply our complexity requirements")
             return render_template('user.chpasswd.html')
 
-        libuser.password_change(g.session['username'], password) # = libuser.login(username, password)
+        libuser.password_change(g.session['username'], password)
         flash("Password changed")
 
     return render_template('user.chpasswd.html')
-

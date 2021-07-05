@@ -1,4 +1,3 @@
-
 import base64
 from io import BytesIO
 
@@ -22,14 +21,17 @@ def do_mfa_view():
     else:
         libmfa.mfa_reset_secret(g.session['username'])
         secret = libmfa.mfa_get_secret(g.session['username'])
-        secret_url = pyotp.totp.TOTP(secret).provisioning_uri(g.session['username'], issuer_name="Athena")
+        secret_url = pyotp.totp.TOTP(secret).provisioning_uri(
+            g.session['username'], issuer_name="Athena")
         img = qrcode.make(secret_url)
 
         buffered = BytesIO()
         img.save(buffered, format="PNG")
         img_str = base64.b64encode(buffered.getvalue()).decode()
 
-        return render_template('mfa.enable.html', secret_url=secret_url, img_str=img_str)
+        return render_template('mfa.enable.html',
+                               secret_url=secret_url,
+                               img_str=img_str)
 
 
 @mod_mfa.route('/', methods=['POST'])
