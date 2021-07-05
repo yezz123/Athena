@@ -17,5 +17,6 @@ def hmac_generate(key, message):
 
     print(hexlify(h.finalize()).decode())
 
+
 if __name__ == '__main__':
     hmac_generate()

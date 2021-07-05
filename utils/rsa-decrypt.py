@@ -12,18 +12,14 @@ from cryptography.hazmat.primitives.asymmetric import padding
 ciphertext = unhexlify(sys.argv[1].encode())
 
 with open("/tmp/gdgsnf.key", "rb") as key_file:
-    private_key = serialization.load_pem_private_key(
-        key_file.read(),
-        password=None,
-        backend=default_backend()
-    )
+    private_key = serialization.load_pem_private_key(key_file.read(),
+                                                     password=None,
+                                                     backend=default_backend())
 
 msg = private_key.decrypt(
     ciphertext,
     padding.OAEP(mgf=padding.MGF1(algorithm=hashes.SHA256()),
-    algorithm=hashes.SHA256(),
-    label=None
-    )
-)
+                 algorithm=hashes.SHA256(),
+                 label=None))
 
 print(msg.decode())

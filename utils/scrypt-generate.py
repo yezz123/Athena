@@ -9,6 +9,7 @@ import click
 from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
 from cryptography.hazmat.backends import default_backend
 
+
 @click.command()
 @click.argument('message')
 def scrypt_generate(message):
@@ -16,14 +17,7 @@ def scrypt_generate(message):
     backend = default_backend()
     salt = os.urandom(16)
 
-    kdf = Scrypt(
-        salt=salt,
-        length=32,
-        n=2**14,
-        r=8,
-        p=1,
-        backend=backend
-    )
+    kdf = Scrypt(salt=salt, length=32, n=2**14, r=8, p=1, backend=backend)
 
     key = kdf.derive(message.encode())
 
@@ -32,4 +26,3 @@ def scrypt_generate(message):
 
 if __name__ == '__main__':
     scrypt_generate()
-

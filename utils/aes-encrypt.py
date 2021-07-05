@@ -11,6 +11,7 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 
+
 @click.command()
 @click.argument('key')
 @click.argument('message')
@@ -24,13 +25,14 @@ def aes_encrypt(key, message):
     digest.update(key.encode())
     key_digest = digest.finalize()
 
-
-    cipher = Cipher(algorithms.AES(key_digest), modes.CFB(iv), backend=default_backend())
+    cipher = Cipher(algorithms.AES(key_digest),
+                    modes.CFB(iv),
+                    backend=default_backend())
     encryptor = cipher.encryptor()
     encrypted = encryptor.update(message.encode()) + encryptor.finalize()
 
     print(hexlify(iv).decode(), hexlify(encrypted).decode())
 
+
 if __name__ == '__main__':
     aes_encrypt()
-

@@ -11,6 +11,7 @@ from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
 from cryptography.hazmat.backends import default_backend
 from cryptography.exceptions import InvalidKey
 
+
 @click.command()
 @click.argument('key')
 @click.argument('salt')
@@ -27,14 +28,7 @@ def crack_scrypt(key, salt):
 
     for number in range(10000):
 
-        kdf = Scrypt(
-            salt=salt,
-            length=32,
-            n=2**14,
-            r=8,
-            p=1,
-            backend=backend
-        )
+        kdf = Scrypt(salt=salt, length=32, n=2**14, r=8, p=1, backend=backend)
 
         try:
             kdf.verify(str(number).encode(), key)
@@ -46,4 +40,3 @@ def crack_scrypt(key, salt):
 
 if __name__ == '__main__':
     crack_scrypt()
-

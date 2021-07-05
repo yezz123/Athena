@@ -6,7 +6,8 @@ import click
 
 
 @click.command()
-@click.argument('algorithm', type=click.Choice(sorted(hashlib.algorithms_available)))
+@click.argument('algorithm',
+                type=click.Choice(sorted(hashlib.algorithms_available)))
 @click.argument('digest')
 def crack_hash(digest, algorithm):
 
@@ -18,6 +19,7 @@ def crack_hash(digest, algorithm):
 
     print('Unable to crack', digest)
     return False
+
 
 if __name__ == '__main__':
     crack_hash()

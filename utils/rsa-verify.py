@@ -14,10 +14,8 @@ msg = sys.argv[1].encode()
 signature = unhexlify(sys.argv[2])
 
 with open("/tmp/gdgsnf.pub", "rb") as key_file:
-    public_key = serialization.load_pem_public_key(
-        key_file.read(),
-        backend=default_backend()
-    )
+    public_key = serialization.load_pem_public_key(key_file.read(),
+                                                   backend=default_backend())
 
 chosen_hash = hashes.SHA256()
 hasher = hashes.Hash(chosen_hash, default_backend())
@@ -26,14 +24,9 @@ digest = hasher.finalize()
 
 try:
     public_key.verify(
-        signature,
-        msg,
-        padding.PSS(
-            mgf=padding.MGF1(hashes.SHA256()),
-            salt_length=padding.PSS.MAX_LENGTH
-        ),
-        hashes.SHA256()
-    )
+        signature, msg,
+        padding.PSS(mgf=padding.MGF1(hashes.SHA256()),
+                    salt_length=padding.PSS.MAX_LENGTH), hashes.SHA256())
     print('Verified')
 except InvalidSignature:
     print('Error')

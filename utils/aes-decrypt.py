@@ -21,7 +21,9 @@ def aes_decrypt(key, iv, message):
     digest.update(key.encode())
     key_digest = digest.finalize()
 
-    cipher = Cipher(algorithms.AES(key_digest), modes.CFB(unhexlify(iv)), backend=default_backend())
+    cipher = Cipher(algorithms.AES(key_digest),
+                    modes.CFB(unhexlify(iv)),
+                    backend=default_backend())
     decryptor = cipher.decryptor()
     plain = decryptor.update(unhexlify(message)) + decryptor.finalize()
 
@@ -30,4 +32,3 @@ def aes_decrypt(key, iv, message):
 
 if __name__ == '__main__':
     aes_decrypt()
-

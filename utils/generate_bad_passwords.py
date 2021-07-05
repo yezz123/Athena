@@ -3,16 +3,22 @@
 import click
 import requests
 import tempfile
-#from libuser import password_complex
 
 MINLENGTH = 12
 URL = 'https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt'
 
 
 @click.command()
-@click.option('-o', 'outfile', default='-', type=click.File('w'), help='Output file (default: stdout)')
+@click.option('-o',
+              'outfile',
+              default='-',
+              type=click.File('w'),
+              help='Output file (default: stdout)')
 @click.option('-u', 'url', default=URL, help='URL to retrieve password file')
-@click.option('-l', 'minlength', default=MINLENGTH, help='Minimum password length')
+@click.option('-l',
+              'minlength',
+              default=MINLENGTH,
+              help='Minimum password length')
 def generate_leaked_passwords(outfile, url, minlength):
 
     temp_outfile = tempfile.NamedTemporaryFile(delete=False)
@@ -43,4 +49,3 @@ def generate_leaked_passwords(outfile, url, minlength):
 
 if __name__ == '__main__':
     generate_leaked_passwords()
-
