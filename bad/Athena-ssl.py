@@ -28,6 +28,6 @@ def before_request():
     g.session = libsession.load(request)
 
 
-app.run(debug=True,
+app.run(debug=False,
         host='127.0.1.1',
         ssl_context=('/tmp/gdgsnf.cert', '/tmp/gdgsnf.key'))
