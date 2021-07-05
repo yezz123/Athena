@@ -288,14 +288,13 @@ This project can only be used for educational purposes. Using this software agai
 
 ## Credits & Thanks 🏆
 
-- This project is under the [MIT LICENSE](/LICENSE), Created by Yasser Tahiri [Yezz123].
+-   This project is under the [MIT LICENSE](/LICENSE), Created by Yasser Tahiri [Yezz123].
 
-- Feel free to Contribute and to open an issue :wave:.
+-   Feel free to Contribute and to open an issue :wave:.
 
-- Drop a star & Follow me Maybe Sponsor me for Motivational Reasons 🌝.
+-   Drop a star & Follow me Maybe Sponsor me for Motivational Reasons 🌝.
 
-- Follow me on my Social Media's Account :
-
+-   Follow me on my Social Media's Account :
 
 <p align="center">
     <a href="https://yassertahiri.medium.com/">
