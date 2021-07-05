@@ -14,10 +14,7 @@ def mfa_is_enabled(username):
         "SELECT * FROM users WHERE username = ? and mfa_enabled = 1",
         (username, )).fetchone()
 
-    if user:
-        return True
-    else:
-        return False
+    return bool(user)
 
 
 def mfa_disable(username):
@@ -85,7 +82,4 @@ def mfa_validate(username, otp):
     secret = mfa_get_secret(username)
     totp = pyotp.TOTP(secret)
 
-    if secret and totp.verify(otp):
-        return True
-    else:
-        return False
+    return bool(secret and totp.verify(otp))
