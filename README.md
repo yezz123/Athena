@@ -1,6 +1,5 @@
-<p align="center">
-  <img width="480" height="480" src="https://github.com/yezz123/Athena/blob/main/img/Athena-Logo.png">
-</p>
+![ATHENA](img/header.svg)
+
 <p align="center">
    <img src="https://img.shields.io/badge/Dev-Yezz123-green?style"/>
    <img src="https://img.shields.io/badge/language-python-blue?style"/>
@@ -112,20 +111,6 @@ Or :
 -   Content Security Policy
 -   SSL/TLS Server
 
-## [Vulnerabilities](https://github.com/GDGSNF/yezz123/blob/main/bad/README.md) 🔥
-
-Some of the vulnerabilities present on the "BAD" version:
-
--   Cross-Site Scripting (XSS)
--   SQL Injection
--   Cross Site Request Forgery (CSRF)
--   Session Impersonation
--   Insecure Deserialization
--   Authentication Bruteforce
--   Authentication Bypass
-
-**Note:** The "GOOD" version (not finished yet) is supposed to don't have vulnerabilities, but I'm a human being, so...
-
 ## Default Credentials 🐍
 
 After database initialization, three users are created:
@@ -138,145 +123,57 @@ After database initialization, three users are created:
 
 You can login with any user, the application doesn't have a permissions system, so, the three have the same permissions.
 
-```bash
-.
-├── athena.toml
-├── bad
-│   ├── api_list.py
-│   ├── api_post.py
-│   ├── Athena.py
-│   ├── Athena-ssl.py
-│   ├── brute.py
-│   ├── csp.txt
-│   ├── db_init.py
-│   ├── db.py
-│   ├── libapi.py
-│   ├── libmfa.py
-│   ├── libposts.py
-│   ├── libsession.py
-│   ├── libuser.py
-│   ├── mod_api.py
-│   ├── mod_csp.py
-│   ├── mod_hello.py
-│   ├── mod_mfa.py
-│   ├── mod_posts.py
-│   ├── mod_user.py
-│   ├── payloads
-│   │   ├── cookie.js
-│   │   ├── hello.html
-│   │   ├── keylogger.js
-│   │   └── payload.js
-│   ├── README.md
-│   ├── static
-│   │   ├── background.png
-│   │   ├── background.xcf
-│   │   └── font-awesome.min.css
-│   └── templates
-│       ├── csp.html
-│       ├── footer.html
-│       ├── head.html
-│       ├── messages.html
-│       ├── mfa.disable.html
-│       ├── mfa.enable.html
-│       ├── navbar.html
-│       ├── posts.view.html
-│       ├── user.chpasswd.html
-│       ├── user.create.html
-│       ├── user.login.html
-│       ├── user.login.mfa.html
-│       └── welcome.html
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── Dockerfile
-├── good
-│   ├── Athena.py
-│   ├── Athena-ssl.py
-│   ├── bad-passwords.txt
-│   ├── csp.txt
-│   ├── cutpasswd.py
-│   ├── db_init.py
-│   ├── GeoLite2-Country.mmdb
-│   ├── httpbrute.py
-│   ├── leaked_passwords.txt
-│   ├── libapi.py
-│   ├── libmfa.py
-│   ├── libposts.py
-│   ├── libsession.py
-│   ├── libuser.py
-│   ├── mod_api.py
-│   ├── mod_csp.py
-│   ├── mod_hello.py
-│   ├── mod_mfa.py
-│   ├── mod_posts.py
-│   ├── mod_user.py
-│   ├── mod_welcome1.py
-│   ├── payloads
-│   │   ├── cookie.js
-│   │   ├── hello.html
-│   │   ├── keylogger.js
-│   │   └── payload.js
-│   ├── static
-│   │   ├── background.png
-│   │   ├── background.xcf
-│   │   └── font-awesome.min.css
-│   └── templates
-│       ├── csp.html
-│       ├── footer.html
-│       ├── head.html
-│       ├── messages.html
-│       ├── mfa.disable.html
-│       ├── mfa.enable.html
-│       ├── navbar.html
-│       ├── posts.view.html
-│       ├── user.chpasswd.html
-│       ├── user.create.html
-│       ├── user.login.html
-│       ├── user.login.mfa.html
-│       └── welcome.html
-├── img
-│   ├── Athena-Logo.png
-│   ├── Logo.png
-│   └── OWASP-logo.png
-├── install.sh
-├── LICENSE
-├── MANIFEST.in
-├── OWASP.Application.Security.Verification.Standard.4.0.2-en.csv
-├── package.json
-├── README.md
-├── requirements.txt
-├── SECURITY.md
-├── setup.cfg
-├── setup.py
-├── tox.ini
-└── utils
-    ├── aes-decrypt.py
-    ├── aes-encrypt.py
-    ├── ca-create.py
-    ├── ca-csr-create.py
-    ├── ca-csr-load.py
-    ├── crack-cvv.py
-    ├── crack-hash.py
-    ├── fernet-generate-key.py
-    ├── generate_bad_passwords.py
-    ├── hashfile.py
-    ├── hmac_generate.py
-    ├── httpbrute.py
-    ├── luncheck.py
-    ├── passwords.txt
-    ├── rsa-decrypt.py
-    ├── rsa-encrypt.py
-    ├── rsa-keygen.py
-    ├── rsa-sign.py
-    ├── rsa-verify.py
-    ├── scrypt-crack.py
-    ├── scrypt-generate.py
-    ├── scrypt-verify.py
-    └── skey.py
-```
+## Vulnerabilities 🔥
+
+Some of the vulnerabilities present on the "BAD" version:
+
+-   Cross-Site Scripting (XSS)
+-   SQL Injection
+-   Cross Site Request Forgery (CSRF)
+-   Session Impersonation
+-   Insecure Deserialization
+-   Authentication Bruteforce
+-   Authentication Bypass
+
+### I- Cross-Site Scripting (XSS)
+
+- Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
+
+- An attacker can use XSS to send a malicious script to an unsuspecting user. The end user’s browser has no way to know that the script should not be trusted, and will execute the script. Because it thinks the script came from a trusted source, the malicious script can access any cookies, session tokens, or other sensitive information retained by the browser and used with that site. These scripts can even rewrite the content of the HTML page. For more details on the different types of XSS flaws.
+
+### II- SQL Injection
+
+- A SQL injection attack consists of insertion or “injection” of a SQL query via the input data from the client to the application. A successful SQL injection exploit can read sensitive data from the database, modify database data (Insert/Update/Delete), execute administration operations on the database (such as shutdown the DBMS), recover the content of a given file present on the DBMS file system and in some cases issue commands to the operating system. SQL injection attacks are a type of injection attack, in which SQL commands are injected into data-plane input in order to effect the execution of predefined SQL commands.
+
+### III- Cross Site Request Forgery (CSRF)
+
+- Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they’re currently authenticated. With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the users of a web application into executing actions of the attacker’s choosing. If the victim is a normal user, a successful CSRF attack can force the user to perform state changing requests like transferring funds, changing their email address, and so forth. If the victim is an administrative account, CSRF can compromise the entire web application.
+
+### IV- Session Impersonation
+
+- Session hijacking is an attack where a user session is taken over by an attacker. A session starts when you log into a service, for example your banking application, and ends when you log out. The attack relies on the attacker’s knowledge of your session cookie, so it is also called cookie hijacking or cookie side-jacking. Although any computer session could be hijacked, session hijacking most commonly applies to browser sessions and web applications.
+
+### V- Insecure Deserialization
+
+- Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code.
+
+### VI- Authentication Bruteforce
+
+- A brute force attack uses trial-and-error to guess login info, encryption keys, or find a hidden web page. Hackers work through all possible combinations hoping to guess correctly.
+
+- These attacks are done by ‘brute force’ meaning they use excessive forceful attempts to try and ‘force’ their way into your private account(s).
+
+- This is an old attack method, but it's still effective and popular with hackers. Because depending on the length and complexity of the password, cracking it can take anywhere from a few seconds to many years.
+
+### VII- Authentication Bypass
+
+- In computer security, authentication is the process of attempting to verify the digital identity of the sender of a communication. A common example of such a process is the log on process. Testing the authentication schema means understanding how the authentication process works and using that information to circumvent the authentication mechanism.
+
+**Note:** The "GOOD" version (not finished yet) is supposed to don't have vulnerabilities.
 
 ## [Contributing](https://github.com/yezz123/Athena/blob/main/CONTRIBUTING.md) ⭐
 
-Contributions are welcome! ♥! Please share any features, and add unit tests! Use the pull request and issue systems to contribute.
+Contributions are welcome! Please share any features, and add unit tests! Use the pull request and issue systems to contribute.
 
 ## Disclaimer 👾
 
@@ -288,9 +185,9 @@ This project can only be used for educational purposes. Using this software agai
 
 ## Credits & Thanks 🏆
 
--   This project is under the [MIT LICENSE](/LICENSE), Created by Yasser Tahiri [Yezz123].
+-   This project is under the [MIT LICENSE](/LICENSE), Created by [Yasser Tahiri](https://yezz.me).
 
--   Feel free to Contribute and to open an issue :wave:.
+-   Feel free to Contribute and to open an issue :wave: .
 
 -   Drop a star & Follow me Maybe Sponsor me for Motivational Reasons 🌝.
 
@@ -304,3 +201,19 @@ This project can only be used for educational purposes. Using this software agai
     <a href="https://discord.gg/2x32TdfB57">
     <img alt="Discord" src="https://img.shields.io/badge/Discord%20-%237289DA.svg?&style=for-the-badge&logo=discord&logoColor=white"/></a>
 </p>
+
+## Reference :alien:
+
+- https://owasp.org/www-community/attacks/xss/
+
+- https://owasp.org/www-community/attacks/SQL_Injection
+
+- https://owasp.org/www-community/attacks/csrf
+
+- https://www.netsparker.com/blog/web-security/session-hijacking/
+
+- https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization
+
+- https://www.kaspersky.com/resource-center/definitions/brute-force-attack
+
+- https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/04-Testing_for_Bypassing_Authentication_Schema

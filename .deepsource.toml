@@ -1,15 +1,16 @@
 version = 1
 exclude_patterns = [
+ "bad/**",
+ "install.sh",
  "utils/**"
 ]
 test_patterns = [
-  "install.sh",
   "setup.py",
-  "bad/**",
   "good/**"
 ]
 
 [[analyzers]]
+
 name = "python"
 enabled = true
 dependency_file_paths = [
