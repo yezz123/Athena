@@ -15,7 +15,7 @@
 
 # Athena 🌙
 
-Athena is a web application developed in [Python](https://www.python.org/) / [Flask](https://flask.palletsprojects.com/en/1.1.x/) / [SQLite](https://www.sqlite.org/index.html) that has two faces. [Read more ....](https://yassertahiri.medium.com/story-of-athena-59f950017a0c)
+Athena is a web application developed in [Python](https://www.python.org/) / [Flask](https://flask.palletsprojects.com/en/1.1.x/) / [SQLite](https://www.sqlite.org/index.html) that has two faces. [Read more About Athena](https://blog.yezz.me/blog/Story-of-Athena)
 
 **GOOD**: Tries to code with secure development best practices in mind.
 
@@ -194,8 +194,6 @@ This project can only be used for educational purposes. Using this software agai
 -   Follow me on my Social Media's Account :
 
 <p align="center">
-    <a href="https://yassertahiri.medium.com/">
-    <img alt="Medium" src="https://img.shields.io/badge/Medium%20-%23000000.svg?&style=for-the-badge&logo=Medium&logoColor=white"/></a>
     <a href="https://twitter.com/THyasser1">
     <img alt="Twitter" src="https://img.shields.io/badge/Twitter%20-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white"</a>
     <a href="https://discord.gg/2x32TdfB57">
