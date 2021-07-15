@@ -1,19 +1,10 @@
-# pull official base image
-FROM python:3.8.3-alpine as builder
+# syntax=docker/dockerfile:1
+FROM python:3.8-slim-buster
 
-# set work directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
-# install dependencies
-COPY ./requirements.txt .
-
-RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/app/wheels -r requirements.txt
-
-RUN ./install.sh
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
 COPY . .
 
