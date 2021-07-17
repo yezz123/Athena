@@ -1,107 +1,184 @@
-![ATHENA](img/OWASP-logo.png)
+![Athena](docs/img/header.svg)
 
 <p align="center">
-   <img src="https://img.shields.io/badge/Dev-Yezz123-green?style"/>
-   <img src="https://img.shields.io/badge/language-python-blue?style"/>
-   <img src="https://img.shields.io/github/license/yezz123/Athena"/>
-   <img src="https://img.shields.io/github/stars/yezz123/Athena"/>
-   <img src="https://img.shields.io/github/forks/yezz123/Athena"/>
-   <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
-   <img src="https://visitor-badge.laobi.icu/badge?page_id=yezz123.Pretty-Readme">
+    <img src="https://img.shields.io/badge/Dev-Yezz123-green?style" />
+    <img src="https://img.shields.io/badge/language-python-blue?style" />
+    <img src="https://img.shields.io/github/license/yezz123/Athena" />
+    <img src="https://img.shields.io/github/stars/yezz123/Athena" />
+    <img src="https://img.shields.io/github/forks/yezz123/Athena" />
+    <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat color=BC4E99"
+        alt="Star Badge" />
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=yezz123.Pretty-Readme" />
     <a href="https://github.com/yezz123/Athena/actions/workflows/python-app.yml">
-    <img src="https://github.com/yezz123/Athena/actions/workflows/python-app.yml/badge.svg?branch=main"/>
-        </a>
+        <img src="https://github.com/yezz123/Athena/actions/workflows/python-app.yml/badge.svg?branch=main" />
+    </a>
+    <a href="https://github.com/yezz123/Athena/actions/workflows/codeql-analysis.yml">
+        <img src="https://github.com/yezz123/Athena/actions/workflows/codeql-analysis.yml/badge.svg" />
+    </a>
+    <a href="https://github.com/yezz123/Athena/actions/workflows/docker-production.yml">
+        <img src="https://github.com/yezz123/Athena/actions/workflows/docker-production.yml/badge.svg?branch=main" />
+    </a>
+    <a href="https://github.com/yezz123/Athena/actions/workflows/docker-image.yml">
+        <img src="https://github.com/yezz123/Athena/actions/workflows/docker-image.yml/badge.svg?branch=main" />
+    </a>
 </p>
 
-# Athena 🌙
+# ATHENA
 
-Athena is a web application developed in [Python](https://www.python.org/) / [Flask](https://flask.palletsprojects.com/en/1.1.x/) / [SQLite](https://www.sqlite.org/index.html) that has two faces. [Read more About Athena](https://blog.yezz.me/blog/Story-of-Athena)
+Athena : is a web application developed in Python-Flask-SQLite for testing your skills as a Hacker, Coder and Warrior.
 
-**GOOD**: Tries to code with secure development best practices in mind.
+## Getting Started
 
-**BAD**: Tries to code like (possibly) you.
+- Athena Work Only on Linux Enviromment, that why you need to use a Linux Distrubtion ex. Ubuntu, CentOS, Kali Linux.
+- Is Preferred to Install one of The Pentesting OS like Kali Linux or Parrot Security OS or Black Arch.
+- Check that you have install `SQLite` or you can install it fast with `sudo apt install sqlite3`.
 
-- OWASP Application Security Verification Standard :
+### Prerequisites
 
-    The "GOOD" version (not finished yet) will comply with the [OWASP ASVS:](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project)
+- Python 3.6 or higher.
+- Flask.
+- Docker (Optional).
 
-    This will permit learn how to develop python code following the best security practices.
+### Project setup
 
-## What is the ASVS?
+```sh
+# clone the repo
+$ git clone https://github.com/yezz123/Athena
+
+# move to the project folder
+$ cd Athena
+```
+
+### Creating virtual environment
+
+- Install `pipenv` a global python project `pip install pipenv`.
+- Create a `virtual environment` for this project.
+
+```shell
+# creating pipenv environment for python 3
+$ pipenv --three
+
+# activating the pipenv environment
+$ pipenv shell
+
+# if you have multiple python 3 versions installed then
+$ pipenv install -d --python 3.8
+
+# install all dependencies (include -d for installing dev dependencies)
+$ pipenv install -d
+```
+
+- After Installing the reqirements, Now you will be able to do some steps to run Athena :
+
+```sh
+# Prefer to use a Pentesting OS ex. Kali Linux or Parrot Security
+$ sudo ./install.sh
+```
+
+- And the key will be registred and you can run now Athena.
+
+### Database Initialization
+
+- Both, `BAD` and `GOOD` versions, requires an initialization of the database.
+
+- This is done by running the `db_init.py` inside each of the directories.
+
+- Each version has their own sqlite files for the users and posts.
+
+- The execution of the script is, for example:
+
+```sh
+# Move to the Bad Directory
+$ cd bad
+# Run the Initialization as Root
+$ sudo ./db_init.py
+```
+
+- Or :
+
+```sh
+# Move to the Good Directory
+$ cd good
+# Run the Initialization as Root
+$ sudo ./db_init.py
+```
+
+### Running the Application
+
+- To run the Application after Database Initialization, you need to choose between 2 version `Athena` or `Athena-SSL`.
+
+```sh
+# if you run the Initialization in the Bad Directorie you need to run the Bad/Athena.py
+
+$ sudo python Athena.py
+
+# Create a Certificate Key and implement it on the ssl configuration to run the SSL version.
+
+# if you run the Initialization in the Bad Directorie you need to run the Bad/Athena-ssl.py
+
+$ sudo python Athena-ssl.py
+```
+
+### Default Credentials
+
+- After database initialization and Running the Application, three users are created:
+
+| Username |  Password   |
+| -------- | :---------: |
+| admin    | SuperSecret |
+| elliot   |  123123123  |
+| tim      |  12345678   |
+
+- You can use one of them to log into it, the application doesn't have a permissions system, so, the three have the same permissions.
+
+## Running the Docker Container
+
+- We have the Dockerfile created in above section. Now, we will use the Dockerfile to create the image of Athena app and then start the Image app container.
+
+```sh
+$ docker build
+```
+
+- list all the docker images and you can also see the image `athena:latest` in the list.
+
+```sh
+$ docker images
+```
+
+- run the application at port 5000. The various options used are:
+
+> - `-p`: publish the container's port to the host port.
+> - `-d`: run the container in the background.
+> - `-i`: run the container in interactive mode.
+> - `-t`: to allocate pseudo-TTY.
+> - `--name`: name of the container
+
+```sh
+$ docker container run -p 5000:5000 -dit --name Athena athena:latest
+```
+
+- Check the status of the docker container.
+
+```sh
+$ docker container ps
+```
+
+## FAQ
+
+##### What is the ASVS?
 
 - The OWASP Application Security Verification Standard (ASVS) Project provides a basis for testing web application technical security controls and also provides developers with a list of requirements for secure development.
 
 - The primary aim of the <b>OWASP Application Security Verification Standard (ASVS) Project</b>is to normalize the range in the coverage and level of rigor available in the market when it comes to performing Web application security verification using a commercially-workable open standard. The standard provides a basis for testing application technical security controls, as well as any technical security controls in the environment, that are relied on to protect against vulnerabilities such as Cross-Site Scripting (XSS) and SQL injection. This standard can be used to establish a level of confidence in the security of Web applications. The requirements were developed with the following objectives in mind:
 
-- [x] -   <b> Use as a metric</b>- Provide application developers and application owners with a yardstick with which to assess the degree of trust that can be placed in their Web applications,
+- [x] - <b> Use as a metric</b>- Provide application developers and application owners with a yardstick with which to assess the degree of trust that can be placed in their Web applications,
 
-- [x] -   <b> Use as guidance</b>- Provide guidance to security control developers as to what to build into security controls in order to satisfy application security requirements, and
+- [x] - <b> Use as guidance</b>- Provide guidance to security control developers as to what to build into security controls in order to satisfy application security requirements, and
 
-- [x] -   <b>Use during procurement</b>- Provide a basis for specifying application security verification requirements in contracts.
+- [x] - <b>Use during procurement</b>- Provide a basis for specifying application security verification requirements in contracts.
 
-## Installation 💼
 
-- With a simple steps you can install Athena and also run it :
-- First you need to use a linux distro ( As example : Kali linux or ubuntu.... )
-- Install both of [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [SQLite](https://www.sqlite.org/index.html)
-
-```sh
-      pip install Flask
-
-      sudo apt install sqlite3
-```
-
-- Then Clone the project into your directory :
-
-```sh
-      git clone https://github.com/yezz123/Athena.git
-
-      cd Athena
-
-      pip3 install --user -r requirements.txt
-```
-
-- After Installing the Project Now you will be able to do some steps to run Athena :
-
-```sh
-      sudo ./install.sh
-```
-
-- And the key will be registred and you can run now Athena!
-
-### Take care 🩸
-
-- If you found a key or a registry id that devel@kali not the creator report on issues or contact Me :
-- Exemple of key :
-
-```sh
-ED44FF07D8D0BF6
-Kali linux Repository<devel@Kali.org>
-```
-
-## Database Initialization 📅
-
-Both, "BAD" and "GOOD" versions, requires an initialization of the database.
-
-This is done with the script "db_init.py" inside each of the directories (bad, and good).
-
-Each version has their own sqlite files for the users and posts.
-
-The execution of the script is, for example:
-
-```sh
-    cd bad
-    ./db_init.py
-```
-
-Or :
-
-```sh
-    cd good
-    ./db_init.py
-```
-
-## Features 🔑
+##### what are the Features that Athena Provide ?
 
 - Login/Logout
 - Read posts from other users
@@ -111,19 +188,7 @@ Or :
 - Content Security Policy
 - SSL/TLS Server
 
-## Default Credentials 🐍
-
-After database initialization, three users are created:
-
-| Username |  Password   |
-| -------- | :---------: |
-| admin    | SuperSecret |
-| elliot   |  123123123  |
-| tim      |  12345678   |
-
-You can login with any user, the application doesn't have a permissions system, so, the three have the same permissions.
-
-## Vulnerabilities 🔥
+##### What are the Vulnerabilities that `Bad` Folder Provide ?
 
 Some of the vulnerabilities present on the "BAD" version:
 
@@ -135,74 +200,31 @@ Some of the vulnerabilities present on the "BAD" version:
 - Authentication Bruteforce
 - Authentication Bypass
 
-### 1 - Cross-Site Scripting (XSS)
+Understand More about the vulnerabilities That Athena Provide by Reading the [Helper.md](docs/Helper.md).
 
-- Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
+##### What is the Reason of Creating Athena ?
 
-- An attacker can use XSS to send a malicious script to an unsuspecting user. The end user’s browser has no way to know that the script should not be trusted, and will execute the script. Because it thinks the script came from a trusted source, the malicious script can access any cookies, session tokens, or other sensitive information retained by the browser and used with that site. These scripts can even rewrite the content of the HTML page. For more details on the different types of XSS flaws.
+Behind lines , Why I choose this name cause it look more dramatic for the project.I am inspired a lot from Athena for example, how she was a great woman with a great power & how she inspire from life and acting for civilization.
 
-### 2 - SQL Injection
+That is for you, cause when you try to escape and use Athena, you break into a world of 0's & 1's for testing your power of coding and breaking into the hidden part.
 
-- A SQL injection attack consists of insertion or “injection” of a SQL query via the input data from the client to the application. A successful SQL injection exploit can read sensitive data from the database, modify database data (Insert/Update/Delete), execute administration operations on the database (such as shutdown the DBMS), recover the content of a given file present on the DBMS file system and in some cases issue commands to the operating system. SQL injection attacks are a type of injection attack, in which SQL commands are injected into data-plane input in order to effect the execution of predefined SQL commands.
+The good side or the side where I respect all OWASP ASVS that show also the good side of thinking that Athena has.
 
-### 3 - Cross Site Request Forgery (CSRF)
+The bad side is where you can test your hidden skills and see if you can break the rules to making it a safe one like Athena did when she fight for civilization.
 
-- Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they’re currently authenticated. With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the users of a web application into executing actions of the attacker’s choosing. If the victim is a normal user, a successful CSRF attack can force the user to perform state changing requests like transferring funds, changing their email address, and so forth. If the victim is an administrative account, CSRF can compromise the entire web application.
+But this is not a civilization war is a war again vulnerability, develop your skills of coding & problem solving with it.
 
-### 4 - Session Impersonation
+- Read More here : <https://blog.yezz.me/blog/Story-of-Athena>
 
-- Session hijacking is an attack where a user session is taken over by an attacker. A session starts when you log into a service, for example your banking application, and ends when you log out. The attack relies on the attacker’s knowledge of your session cookie, so it is also called cookie hijacking or cookie side-jacking. Although any computer session could be hijacked, session hijacking most commonly applies to browser sessions and web applications.
+## Contributing
 
-### 5 - Insecure Deserialization
+- Join the Athena's Creator and Contribute to the Project if you have any enhancement or add-ons to create a good and Secure Project, Help any User to Use it in a good and simple way.
+- Check all information here at [docs's Folder](docs) to understand to how to contribute or to Read the Code of Conduct.
 
-- Exploitation of deserialization is somewhat difficult, as off the shelf exploits rarely work without changes or tweaks to the underlying exploit code.
-
-### 6 - Authentication Bruteforce
-
-- A brute force attack uses trial-and-error to guess login info, encryption keys, or find a hidden web page. Hackers work through all possible combinations hoping to guess correctly.
-
-- These attacks are done by ‘brute force’ meaning they use excessive forceful attempts to try and ‘force’ their way into your private account(s).
-
-- This is an old attack method, but it's still effective and popular with hackers. Because depending on the length and complexity of the password, cracking it can take anywhere from a few seconds to many years.
-
-### 7 - Authentication Bypass
-
-- In computer security, authentication is the process of attempting to verify the digital identity of the sender of a communication. A common example of such a process is the log on process. Testing the authentication schema means understanding how the authentication process works and using that information to circumvent the authentication mechanism.
-
-**Note:** The "GOOD" version (not finished yet) is supposed to don't have vulnerabilities.
-
-## [Contributing](https://github.com/yezz123/Athena/blob/main/CONTRIBUTING.md) ⭐
-
-Contributions are welcome! Please share any features, and add unit tests! Use the pull request and issue systems to contribute.
-
-## Disclaimer 👾
+### Disclaimer
 
 This project can only be used for educational purposes. Using this software against target systems without prior permission is illegal, and any damages from misuse of this software will not be the responsibility of the author.
 
-<div align="right">
-    <b><a href="#athena-">↥ Back To Top</a></b>
-</div>
+## License
 
-## Credits & Thanks 🏆
-
-- This project is under the [MIT LICENSE](/LICENSE), Created by [Yasser Tahiri](https://yezz.me).
-
-- Feel free to Contribute and to open an issue :wave: .
-
-- Drop a star & Follow me Maybe Sponsor me for Motivational Reasons 🌝.
-
-## Reference
-
-- <https://owasp.org/www-community/attacks/xss/>
-
-- <https://owasp.org/www-community/attacks/SQL_Injection>
-
-- <https://owasp.org/www-community/attacks/csrf>
-
-- <https://www.netsparker.com/blog/web-security/session-hijacking/>
-
-- <https://owasp.org/www-project-top-ten/2017/A8_2017-Insecure_Deserialization>
-
-- <https://www.kaspersky.com/resource-center/definitions/brute-force-attack>
-
-- <https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/04-Testing_for_Bypassing_Authentication_Schema>
+This project is licensed under the terms of the MIT license.
