@@ -6,8 +6,7 @@
     <img src="https://img.shields.io/github/license/yezz123/Athena" />
     <img src="https://img.shields.io/github/stars/yezz123/Athena" />
     <img src="https://img.shields.io/github/forks/yezz123/Athena" />
-    <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat color=BC4E99"
-        alt="Star Badge" />
+    <img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat color=BC4E99"alt="Star Badge" />
     <img src="https://visitor-badge.laobi.icu/badge?page_id=yezz123.Pretty-Readme" />
     <a href="https://github.com/yezz123/Athena/actions/workflows/python-app.yml">
         <img src="https://github.com/yezz123/Athena/actions/workflows/python-app.yml/badge.svg?branch=main" />
@@ -25,7 +24,7 @@
 
 # ATHENA
 
-Athena : is a web application developed in Python-Flask-SQLite for testing your skills as a Hacker, Coder and Warrior.
+Athena is a web application developed in Python-Flask-SQLite for testing your skills as a Hacker, Coder and Warrior.
 
 ## Getting Started
 
@@ -165,7 +164,7 @@ $ docker container ps
 
 ## FAQ
 
-##### What is the ASVS?
+### What is the ASVS?
 
 - The OWASP Application Security Verification Standard (ASVS) Project provides a basis for testing web application technical security controls and also provides developers with a list of requirements for secure development.
 
@@ -178,7 +177,7 @@ $ docker container ps
 - [x] - <b>Use during procurement</b>- Provide a basis for specifying application security verification requirements in contracts.
 
 
-##### what are the Features that Athena Provide ?
+### what are the Features that Athena Provide ?
 
 - Login/Logout
 - Read posts from other users
@@ -188,7 +187,7 @@ $ docker container ps
 - Content Security Policy
 - SSL/TLS Server
 
-##### What are the Vulnerabilities that `Bad` Folder Provide ?
+### What are the Vulnerabilities that `Bad` Folder Provide ?
 
 Some of the vulnerabilities present on the "BAD" version:
 
@@ -202,7 +201,7 @@ Some of the vulnerabilities present on the "BAD" version:
 
 Understand More about the vulnerabilities That Athena Provide by Reading the [Helper.md](docs/Helper.md).
 
-##### What is the Reason of Creating Athena ?
+### What is the Reason of Creating Athena ?
 
 Behind lines , Why I choose this name cause it look more dramatic for the project.I am inspired a lot from Athena for example, how she was a great woman with a great power & how she inspire from life and acting for civilization.
 
