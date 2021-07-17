@@ -2,7 +2,6 @@
     "name": "athena",
     "version": "2.0.0",
     "description": "Athena is a web application developed in python / flask / SQLite that has two faces.",
-    "main": "setup.py",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/yezz123/Athena.git"
