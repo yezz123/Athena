@@ -1,4 +1,3 @@
-import hashlib
 import os
 import sqlite3
 from binascii import hexlify, unhexlify
@@ -13,28 +12,24 @@ HERE = Path(__file__).parent
 
 def login(username, password, **kwargs):
 
-    conn = sqlite3.connect('db_users.sqlite')
+    conn = sqlite3.connect("db_users.sqlite")
     conn.set_trace_callback(print)
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
 
-    user = c.execute("SELECT * FROM users WHERE username = ?",
-                     (username, )).fetchone()
+    user = c.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
 
     if not user:
         return False
 
     backend = default_backend()
 
-    kdf = Scrypt(salt=unhexlify(user['salt']),
-                 length=32,
-                 n=2**14,
-                 r=8,
-                 p=1,
-                 backend=backend)
+    kdf = Scrypt(
+        salt=unhexlify(user["salt"]), length=32, n=2 ** 14, r=8, p=1, backend=backend
+    )
 
     try:
-        kdf.verify(password.encode(), unhexlify(user['password']))
+        kdf.verify(password.encode(), unhexlify(user["password"]))
         return username
     except InvalidKey:
         return False
@@ -45,13 +40,14 @@ def login(username, password, **kwargs):
 
 def user_create(username, password=None):
 
-    conn = sqlite3.connect('db_users.sqlite')
+    conn = sqlite3.connect("db_users.sqlite")
     conn.set_trace_callback(print)
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
     c.execute(
         "INSERT INTO users (username, password, salt, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%s', '%d', '%d', '%s')"
-        % (username, '', '', 0, 0, ''))
+        % (username, "", "", 0, 0, "")
+    )
     conn.commit()
     if password:
         password_set(username, password)
@@ -63,24 +59,26 @@ def password_set(username, password):
     backend = default_backend()
     salt = os.urandom(16)
 
-    kdf = Scrypt(salt=salt, length=32, n=2**14, r=8, p=1, backend=backend)
+    kdf = Scrypt(salt=salt, length=32, n=2 ** 14, r=8, p=1, backend=backend)
 
     key = kdf.derive(password.encode())
 
-    conn = sqlite3.connect('db_users.sqlite')
+    conn = sqlite3.connect("db_users.sqlite")
     conn.set_trace_callback(print)
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
 
-    print('Changing password for', username)
-    c.execute("UPDATE users SET password = ?, salt = ? WHERE username = ?",
-              (hexlify(key).decode(), hexlify(salt).decode(), username))
+    print("Changing password for", username)
+    c.execute(
+        "UPDATE users SET password = ?, salt = ? WHERE username = ?",
+        (hexlify(key).decode(), hexlify(salt).decode(), username),
+    )
     conn.commit()
 
 
 def userlist():
 
-    conn = sqlite3.connect('db_users.sqlite')
+    conn = sqlite3.connect("db_users.sqlite")
     conn.set_trace_callback(print)
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
@@ -90,7 +88,7 @@ def userlist():
     if not users:
         return []
     else:
-        return [user['username'] for user in users]
+        return [user["username"] for user in users]
 
 
 def password_change(username, old_password, new_password):
@@ -111,8 +109,8 @@ def is_password_complex(password):
 
 
 def is_password_leaked(password):
-    with (HERE / 'leaked_passwords.txt').open() as leaked_password_file:
-        for p in leaked_password_file.read().split('\n'):
+    with (HERE / "leaked_passwords.txt").open() as leaked_password_file:
+        for p in leaked_password_file.read().split("\n"):
             if password == p:
                 return True
     return False

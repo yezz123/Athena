@@ -7,10 +7,9 @@ from libuser import user_create
 
 def db_init_users():
 
-    users = [('admin', 'SuperSecret'), ('elliot', '123123123'),
-             ('tim', '12345678')]
+    users = [("admin", "SuperSecret"), ("elliot", "123123123"), ("tim", "12345678")]
 
-    conn = sqlite3.connect('db_users.sqlite')
+    conn = sqlite3.connect("db_users.sqlite")
     c = conn.cursor()
     c.execute(
         "CREATE TABLE users (username text, password text, salt text, failures int, mfa_enabled int, mfa_secret text)"
@@ -24,7 +23,7 @@ def db_init_users():
 
 def db_init_posts():
 
-    conn = sqlite3.connect('db_posts.sqlite')
+    conn = sqlite3.connect("db_posts.sqlite")
     c = conn.cursor()
     c.execute("CREATE TABLE posts (date date, username text, text text)")
 
@@ -32,15 +31,15 @@ def db_init_posts():
     conn.close()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     try:
-        os.remove('db_users.sqlite')
+        os.remove("db_users.sqlite")
     except FileNotFoundError:
         pass
 
     try:
-        os.remove('db_posts.sqlite')
+        os.remove("db_posts.sqlite")
     except FileNotFoundError:
         pass
 

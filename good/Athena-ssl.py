@@ -9,18 +9,18 @@ from mod_mfa import mod_mfa
 
 import libsession
 
-app = Flask('Athena')
-app.config['SECRET_KEY'] = 'aaaaaaa'
+app = Flask("Athena")
+app.config["SECRET_KEY"] = "aaaaaaa"
 
-app.register_blueprint(mod_hello, url_prefix='/hello')
-app.register_blueprint(mod_user, url_prefix='/user')
-app.register_blueprint(mod_posts, url_prefix='/posts')
-app.register_blueprint(mod_mfa, url_prefix='/mfa')
+app.register_blueprint(mod_hello, url_prefix="/hello")
+app.register_blueprint(mod_user, url_prefix="/user")
+app.register_blueprint(mod_posts, url_prefix="/posts")
+app.register_blueprint(mod_mfa, url_prefix="/mfa")
 
 
-@app.route('/')
+@app.route("/")
 def do_home():
-    return redirect('/posts')
+    return redirect("/posts")
 
 
 @app.before_request
@@ -28,6 +28,6 @@ def before_request():
     g.session = libsession.load(request)
 
 
-app.run(debug=True,
-        host='127.0.1.1',
-        ssl_context=('/tmp/gdgsnf.cert', '/tmp/gdgsnf.key'))
+app.run(
+    debug=True, host="127.0.1.1", ssl_context=("/tmp/gdgsnf.cert", "/tmp/gdgsnf.key")
+)
