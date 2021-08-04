@@ -134,6 +134,15 @@ $ sudo python Athena-ssl.py
 
 - We have the Dockerfile created in above section. Now, we will use the Dockerfile to create the image of Athena app and then start the Image app container.
 
+__Note__ If you try to run the `bad` folder change the workdir to it cause the `good` folder is default one.
+
+- [Dockerfile](Dockerfile)
+
+```sh
+# Change the working directory to the good Folder
+WORKDIR /app/good
+```
+
 ```sh
 docker build
 ```
