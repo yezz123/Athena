@@ -12,7 +12,7 @@ RUN pip3 install -r requirements.txt
 
 # Copy the Shell script to the container and Run it
 COPY install.sh install.sh
-RUN ./install.sh
+RUN sudo ./install.sh
 
 # Copy the Full Project to the container
 COPY . /app
