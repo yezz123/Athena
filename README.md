@@ -135,13 +135,13 @@ $ sudo python Athena-ssl.py
 - We have the Dockerfile created in above section. Now, we will use the Dockerfile to create the image of Athena app and then start the Image app container.
 
 ```sh
-$ docker build
+docker build
 ```
 
 - list all the docker images and you can also see the image `athena:latest` in the list.
 
 ```sh
-$ docker images
+docker images
 ```
 
 - run the application at port 5000. The various options used are:
@@ -153,13 +153,13 @@ $ docker images
 > - `--name`: name of the container
 
 ```sh
-$ docker container run -p 5000:5000 -dit --name Athena athena:latest
+docker container run -p 5000:5000 -dit --name Athena athena:latest
 ```
 
 - Check the status of the docker container.
 
 ```sh
-$ docker container ps
+docker container ps
 ```
 
 ## FAQ
@@ -170,12 +170,11 @@ $ docker container ps
 
 - The primary aim of the <b>OWASP Application Security Verification Standard (ASVS) Project</b>is to normalize the range in the coverage and level of rigor available in the market when it comes to performing Web application security verification using a commercially-workable open standard. The standard provides a basis for testing application technical security controls, as well as any technical security controls in the environment, that are relied on to protect against vulnerabilities such as Cross-Site Scripting (XSS) and SQL injection. This standard can be used to establish a level of confidence in the security of Web applications. The requirements were developed with the following objectives in mind:
 
-- [x] - <b> Use as a metric</b>- Provide application developers and application owners with a yardstick with which to assess the degree of trust that can be placed in their Web applications,
+- [x] -   <b> Use as a metric</b>- Provide application developers and application owners with a yardstick with which to assess the degree of trust that can be placed in their Web applications,
 
-- [x] - <b> Use as guidance</b>- Provide guidance to security control developers as to what to build into security controls in order to satisfy application security requirements, and
+- [x] -   <b> Use as guidance</b>- Provide guidance to security control developers as to what to build into security controls in order to satisfy application security requirements, and
 
-- [x] - <b>Use during procurement</b>- Provide a basis for specifying application security verification requirements in contracts.
-
+- [x] -   <b>Use during procurement</b>- Provide a basis for specifying application security verification requirements in contracts.
 
 ### what are the Features that Athena Provide ?
 
