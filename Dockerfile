@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 # This Dockerfile uses the following sources:
-FROM python:3.8-slim-buster
 FROM kalilinux/kali-rolling:latest
+FROM python:3.8-slim-buster
 
 # Create Work Dir
 WORKDIR /app
