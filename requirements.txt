@@ -11,7 +11,7 @@ colorama==0.4.4
 cryptography==3.4.7
 Flask==2.0.1
 geoip2==4.2.0
-idna==2.10
+idna==3.2
 itsdangerous==2.0.1
 Jinja2==3.0.1
 jsonschema==3.2.0
