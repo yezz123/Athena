@@ -27,7 +27,7 @@ pyotp==2.6.0
 pyrsistent==0.18.0
 qrcode==7.1
 regex==2021.8.3
-requests==2.25.1
+requests==2.26.0
 six==1.16.0
 tomli==1.2.0
 typing-extensions==3.10.0.0
