@@ -1,0 +1,20 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: pull image
+        run: make pull
+      - name: build image
+        run: make build
+      - name: lint image
+        run: make lint
