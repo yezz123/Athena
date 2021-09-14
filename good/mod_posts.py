@@ -1,7 +1,6 @@
-from flask import Blueprint, render_template, redirect, request, g
-
 import libposts
 import libuser
+from flask import Blueprint, g, redirect, render_template, request
 
 mod_posts = Blueprint("mod_posts", __name__, template_folder="templates")
 

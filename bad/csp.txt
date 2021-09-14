@@ -13,7 +13,7 @@
 #img-src 'self' https://www.python.org;
 
 #style-src 'self';
-#style-src 'self' 'unsafe-inline'; 
+#style-src 'self' 'unsafe-inline';
 
 #style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
 #font-src https://fonts.gstatic.com;

@@ -1,8 +1,8 @@
-import libuser
-import random
 import hashlib
-
+import random
 from pathlib import Path
+
+import libuser
 
 
 def keygen(username, password=None):

@@ -2,16 +2,14 @@
 
 from pathlib import Path
 
-from flask import Flask, g, redirect, request
-
-from mod_hello import mod_hello
-from mod_user import mod_user
-from mod_posts import mod_posts
-from mod_mfa import mod_mfa
-from mod_csp import mod_csp
-from mod_api import mod_api
-
 import libsession
+from flask import Flask, g, redirect, request
+from mod_api import mod_api
+from mod_csp import mod_csp
+from mod_hello import mod_hello
+from mod_mfa import mod_mfa
+from mod_posts import mod_posts
+from mod_user import mod_user
 
 app = Flask("Athena")
 app.config[
