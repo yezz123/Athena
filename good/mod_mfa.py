@@ -45,12 +45,9 @@ def do_mfa_enable():
 
     if totp.verify(otp):
         libmfa.mfa_enable(g.session["username"])
-        return redirect("/mfa/")
     else:
         flash("The OTP was incorrect")
-        return redirect("/mfa/")
-
-    return render_template("mfa.enable.html")
+    return redirect("/mfa/")
 
 
 @mod_mfa.route("/disable", methods=["GET"])

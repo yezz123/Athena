@@ -10,7 +10,7 @@ import click
 @click.argument("digest")
 def crack_cvv(algorithm, digest):
 
-    for number in range(0, 1000):
+    for number in range(1000):
         cvv = "{:03}".format(number).encode()
         result = hashlib.new(algorithm, cvv).hexdigest()
         if digest == result:

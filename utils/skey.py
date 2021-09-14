@@ -12,7 +12,7 @@ lastkey = hashlib.new(ALGORITHM, key).hexdigest()
 
 otps = []
 
-for i in range(OTPNUM):
+for _ in range(OTPNUM):
     lastkey = hashlib.new(ALGORITHM, lastkey.encode()).hexdigest()
     otps.append(lastkey)
 

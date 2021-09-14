@@ -93,4 +93,3 @@ def do_chpasswd_post():
 
     libuser.password_set(g.session["username"], new_password)
     return redirect("/")
-    flash("Password changed")
