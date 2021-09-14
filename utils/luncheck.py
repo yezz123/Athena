@@ -5,14 +5,14 @@ def luhnCheck(card_number):
     num_digits = len(card_number)
     oddeven = num_digits & 1
 
-    for count in range(0, num_digits):
+    for count in range(num_digits):
         digit = int(card_number[count])
 
         if not ((count & 1) ^ oddeven):
-            digit = digit * 2
+            digit *= 2
         if digit > 9:
-            digit = digit - 9
+            digit -= 9
 
-        sum = sum + digit
+        sum += digit
 
     return (sum % 10) == 0
