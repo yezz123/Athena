@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: flask run
+    ports:
+      - 5000:5000
+    environment:
+      - FLASK_APP=good/Athena.py
+      - ENVIRONMENT=dev
+      - TESTING=0
