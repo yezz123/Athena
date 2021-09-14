@@ -6,7 +6,8 @@ FROM python:3.8-slim-buster
 
 # Preconfigure environment
 COPY install.sh /install.sh
-RUN /install.sh
+RUN chmod +x /install.sh
+RUN ./install.sh
 
 # Create Work Dir
 WORKDIR /app
