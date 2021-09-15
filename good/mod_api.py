@@ -1,11 +1,7 @@
-from flask import (
-    Blueprint,
-    request,
-    jsonify,
-)
-import libposts
 import libapi
-from jsonschema import validate, ValidationError
+import libposts
+from flask import Blueprint, jsonify, request
+from jsonschema import ValidationError, validate
 
 mod_api = Blueprint("mod_api", __name__, template_folder="templates")
 
@@ -22,9 +18,7 @@ key_schema = {
 post_schema = {
     "type": "object",
     "required": ["text"],
-    "properties": {
-        "text": {"type": "string"},
-    },
+    "properties": {"text": {"type": "string"},},
     "additionalProperties": False,
 }
 

@@ -1,16 +1,16 @@
+import libmfa
+import libsession
+import libuser
 from flask import (
     Blueprint,
-    render_template,
-    redirect,
-    request,
-    g,
-    session,
-    make_response,
     flash,
+    g,
+    make_response,
+    redirect,
+    render_template,
+    request,
+    session,
 )
-import libmfa
-import libuser
-import libsession
 
 mod_user = Blueprint("mod_user", __name__, template_folder="templates")
 

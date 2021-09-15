@@ -1,9 +1,10 @@
+import base64
+from io import BytesIO
+
 import libmfa
 import pyotp
 import qrcode
-import base64
-from io import BytesIO
-from flask import Blueprint, render_template, redirect, request, g, flash
+from flask import Blueprint, flash, g, redirect, render_template, request
 
 mod_mfa = Blueprint("mod_mfa", __name__, template_folder="templates")
 
@@ -44,12 +45,9 @@ def do_mfa_enable():
 
     if totp.verify(otp):
         libmfa.mfa_enable(g.session["username"])
-        return redirect("/mfa/")
     else:
         flash("The OTP was incorrect")
-        return redirect("/mfa/")
-
-    return render_template("mfa.enable.html")
+    return redirect("/mfa/")
 
 
 @mod_mfa.route("/disable", methods=["GET"])

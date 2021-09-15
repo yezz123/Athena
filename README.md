@@ -28,7 +28,7 @@ Athena is a web application developed in Python-Flask-SQLite for testing your sk
 
 ## Getting Started
 
-- Athena Work Only on Linux Enviromment, that why you need to use a Linux Distrubtion ex. Ubuntu, CentOS, Kali Linux.
+- Athena Work Only on Linux Environment, that why you need to use a Linux Distribution ex. Ubuntu, CentOS, Kali Linux.
 - Is Preferred to Install one of The Pentesting OS like Kali Linux or Parrot Security OS or Black Arch.
 - Check that you have install `SQLite` or you can install it fast with `sudo apt install sqlite3`.
 
@@ -67,14 +67,14 @@ $ pipenv install -d --python 3.8
 $ pipenv install -d
 ```
 
-- After Installing the reqirements, Now you will be able to do some steps to run Athena :
+- After Installing the requirements, Now you will be able to do some steps to run Athena :
 
 ```sh
 # Prefer to use a Pentesting OS ex. Kali Linux or Parrot Security
 $ sudo ./install.sh
 ```
 
-- And the key will be registred and you can run now Athena.
+- And the key will be registered and you can run now Athena.
 
 ### Database Initialization
 
@@ -107,13 +107,13 @@ $ sudo ./db_init.py
 - To run the Application after Database Initialization, you need to choose between 2 version `Athena` or `Athena-SSL`.
 
 ```sh
-# if you run the Initialization in the Bad Directorie you need to run the Bad/Athena.py
+# if you run the Initialization in the Bad Directories you need to run the Bad/Athena.py
 
 $ sudo python Athena.py
 
 # Create a Certificate Key and implement it on the ssl configuration to run the SSL version.
 
-# if you run the Initialization in the Bad Directorie you need to run the Bad/Athena-ssl.py
+# if you run the Initialization in the Bad Directories you need to run the Bad/Athena-ssl.py
 
 $ sudo python Athena-ssl.py
 ```
@@ -134,41 +134,13 @@ $ sudo python Athena-ssl.py
 
 - We have the Dockerfile created in above section. Now, we will use the Dockerfile to create the image of Athena app and then start the Image app container.
 
-__Note__ If you try to run the `bad` folder change the workdir to it cause the `good` folder is default one.
-
-- [Dockerfile](Dockerfile)
+- You could use a pre-configured `Makefile` to build the image and start the container.
 
 ```sh
-# Change the working directory to the good Folder
-WORKDIR /app/good
-```
-
-```sh
-docker build
-```
-
-- list all the docker images and you can also see the image `athena:latest` in the list.
-
-```sh
-docker images
-```
-
-- run the application at port 5000. The various options used are:
-
-> - `-p`: publish the container's port to the host port.
-> - `-d`: run the container in the background.
-> - `-i`: run the container in interactive mode.
-> - `-t`: to allocate pseudo-TTY.
-> - `--name`: name of the container
-
-```sh
-docker container run -p 5000:5000 -dit --name Athena athena:latest
-```
-
-- Check the status of the docker container.
-
-```sh
-docker container ps
+# Build the image
+$ make build
+# Start the container
+$ make start
 ```
 
 ## FAQ

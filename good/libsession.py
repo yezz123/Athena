@@ -1,5 +1,4 @@
 import geoip2.database
-
 from cryptography.fernet import Fernet
 
 key = "JHtM1wEt1I1J9N_Evjwqr3yYauXIqSxYzFnRhcf0ZG0="

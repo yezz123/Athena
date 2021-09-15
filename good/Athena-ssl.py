@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
-from flask import Flask, g, redirect, request
-
-from mod_hello import mod_hello
-from mod_user import mod_user
-from mod_posts import mod_posts
-from mod_mfa import mod_mfa
-
 import libsession
+from flask import Flask, g, redirect, request
+from mod_hello import mod_hello
+from mod_mfa import mod_mfa
+from mod_posts import mod_posts
+from mod_user import mod_user
 
 app = Flask("Athena")
 app.config["SECRET_KEY"] = "aaaaaaa"

@@ -1,5 +1,6 @@
-import pyotp
 import sqlite3
+
+import pyotp
 
 
 def mfa_is_enabled(username):

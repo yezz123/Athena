@@ -1,8 +1,7 @@
-import libuser
-import jwt
 from time import time
 
-from pathlib import Path
+import jwt
+import libuser
 
 secret = "MYSUPERSECRETKEY"
 not_after = 60

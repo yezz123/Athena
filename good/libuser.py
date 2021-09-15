@@ -3,9 +3,9 @@ import sqlite3
 from binascii import hexlify, unhexlify
 from pathlib import Path
 
+from cryptography.exceptions import InvalidKey
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
-from cryptography.exceptions import InvalidKey
 
 HERE = Path(__file__).parent
 

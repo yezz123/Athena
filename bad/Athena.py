@@ -2,9 +2,8 @@
 
 from pathlib import Path
 
-from flask import Flask, g, redirect, request
-
 import libsession
+from flask import Flask, g, redirect, request
 from mod_api import mod_api
 from mod_csp import mod_csp
 from mod_hello import mod_hello

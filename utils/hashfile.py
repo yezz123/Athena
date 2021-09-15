@@ -8,7 +8,7 @@ from cryptography.hazmat.primitives import hashes
 
 
 @click.command()
-@click.argument('input_file', type=click.File('rb'), default='-')
+@click.argument("input_file", type=click.File("rb"), default="-")
 def hashfile(input_file):
 
     data = input_file.read()
@@ -16,8 +16,8 @@ def hashfile(input_file):
     digest.update(data)
     hexdigest = hexlify(digest.finalize()).decode()
 
-    print('{:<12} {}'.format('sha512', hexdigest))
+    print("{:<12} {}".format("sha512", hexdigest))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     hashfile()
