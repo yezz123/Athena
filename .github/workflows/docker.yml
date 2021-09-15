@@ -1,4 +1,4 @@
-name: Build Local
+name: Build Docker Image
 
 on:
   push:
@@ -16,7 +16,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-      - name: Test the linting
-        run: pre-commit run --all-files
+      - name: pull Image
+        run: make pull
+      - name: build Image
+        run: make build
+      - name: Lint Image
+        run: make lint
