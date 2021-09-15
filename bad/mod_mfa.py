@@ -28,9 +28,7 @@ def do_mfa_view():
     img.save(buffered, format="PNG")
     img_str = base64.b64encode(buffered.getvalue()).decode()
 
-    return render_template(
-        "mfa.enable.html", secret_url=secret_url, img_str=img_str
-    )
+    return render_template("mfa.enable.html", secret_url=secret_url, img_str=img_str)
 
 
 @mod_mfa.route("/", methods=["POST"])
