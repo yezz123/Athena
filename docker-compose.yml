@@ -1,7 +1,7 @@
-version: "3.8"
+version: "3.7"
 
 services:
-    backend:
+    athena:
         build:
             context: .
             dockerfile: Dockerfile
@@ -11,4 +11,3 @@ services:
         environment:
             - FLASK_APP=good/Athena.py
             - ENVIRONMENT=dev
-            - TESTING=0

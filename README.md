@@ -186,7 +186,7 @@ But this is not a civilization war is a war again vulnerability, develop your sk
 ## Contributing
 
 - Join the Athena's Creator and Contribute to the Project if you have any enhancement or add-ons to create a good and Secure Project, Help any User to Use it in a good and simple way.
-- Check all information here at [docs's Folder](docs) to understand to how to contribute or to Read the Code of Conduct.
+- Don't forget to check the [CONTRIBUTING.md](CONTRIBUTING.md) file to understand the contribution process.
 
 ### Disclaimer
 

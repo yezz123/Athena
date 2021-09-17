@@ -2,7 +2,6 @@ aiohttp
 appdirs
 async-timeout
 attrs
-black
 certifi
 cffi
 chardet
@@ -36,4 +35,3 @@ typing-extensions
 urllib3
 Werkzeug
 yarl
-pre-commit

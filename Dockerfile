@@ -1,13 +1,9 @@
 # syntax=docker/dockerfile:1
 
-# This Dockerfile uses the following sources:
-FROM kalilinux/kali-rolling:latest
-FROM python:3.8-slim-buster
+FROM ubuntu:latest
 
-# Preconfigure environment
-COPY install.sh /install.sh
-RUN chmod +x /install.sh
-RUN ./install.sh
+RUN apt-get update -y
+RUN apt-get install -y python3-pip python3-dev build-essential
 
 # Create Work Dir
 WORKDIR /app
@@ -22,5 +18,6 @@ RUN pip3 install -r requirements.txt
 # Change the working directory to the good Folder
 WORKDIR /app/good
 
+# Set env vars and Expose ports
 ENV PYTHONPATH=/app
 EXPOSE 5000 5000
