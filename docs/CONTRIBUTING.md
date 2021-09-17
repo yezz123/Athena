@@ -1,5 +1,10 @@
 # Contributing to Athena
 
+- Start contributing by forking the repository and making a pull request.
+- Don't forget to install `pre-commit` by running `pip install pre-commit`.
+- Lint the edited file using `pre-commit run --all-files` | Check the linting configuration in [`.pre-commit-config.yaml`](/.pre-commit-config.yaml).
+- Check Also if the project built under Docker.
+
 ## Open Source License, but Private Development
 
 Athena is different than most projects on GitHub. It is licensed using the "MIT license" MIT. However, the coding and development of the project is an "open source".
