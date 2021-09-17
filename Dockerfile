@@ -19,7 +19,6 @@ RUN sudo apt-get update
 
 # Preconfigure environment
 COPY install.sh /install.sh
-RUN chmod +x /install.sh
 RUN sudo ./install.sh
 
 # Create Work Dir
