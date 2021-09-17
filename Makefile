@@ -20,7 +20,7 @@ build:
 	docker-compose build
 
 lint:
-	docker-compose run --rm backend pre-commit run --all-files
+	docker-compose run --rm athena pre-commit run --all-files
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} +
