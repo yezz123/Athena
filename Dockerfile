@@ -1,38 +1,12 @@
 # syntax=docker/dockerfile:1
 
-# This Dockerfile uses the following sources:
-FROM ubuntu:16.04
+FROM ubuntu:latest
 
-# Install apt-utils
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends apt-utils
-
-# Install Sudo Command
-RUN apt-get update \
-    && apt-get install -y sudo
-
-# install gnupg
-RUN apt-get update \
-    && apt-get install -y gnupg \
-    && apt-get install -y gnupg2
-
-# Config sudo to allow no-password sudo for "docker"
-RUN adduser --disabled-password --gecos '' docker
-RUN adduser docker sudo
-RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-
-# Set the UID/GID of the docker user
-USER docker
+RUN apt-get update -y
+RUN apt-get install -y python-pip python-dev build-essential
 
 # Create Work Dir
 WORKDIR /app
-
-# this is where I was running into problems with the other approaches
-RUN sudo apt-get update
-
-# Preconfigure environment
-COPY install.sh /app/install.sh
-RUN sudo ./install.sh
 
 # Copy the Full Project to the container
 COPY . /app
