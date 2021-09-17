@@ -20,5 +20,3 @@ jobs:
         run: make pull
       - name: build Image
         run: make build
-      - name: Lint Image
-        run: make lint
