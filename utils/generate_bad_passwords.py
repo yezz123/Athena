@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import tempfile
 
 import click

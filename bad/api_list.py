@@ -6,9 +6,9 @@ import requests
 @click.argument("username")
 def cmd_api_client(username):
 
-    r = requests.get("http://127.0.1.1:5000/api/post/{}".format(username))
+    r = requests.get(f"http://127.0.1.1:5000/api/post/{username}")
     if r.status_code != 200:
-        click.echo("Some error ocurred. Status Code: {}".format(r.status_code))
+        click.echo(f"Some error ocurred. Status Code: {r.status_code}")
         print(r.text)
         return False
 
