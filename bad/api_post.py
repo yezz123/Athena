@@ -21,9 +21,7 @@ def cmd_api_client(message):
 
         if r.status_code != 200:
             click.echo(
-                "Invalid authentication or other error ocurred. Status code: {}".format(
-                    r.status_code
-                )
+                f"Invalid authentication or other error ocurred. Status code: {r.status_code}"
             )
             return False
 

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import logging
 
 import click
@@ -24,7 +22,7 @@ def http_brute(url, username, password_file, success_string, verbose):
 
     for password in passwords:
         response = requests.post(url, data={"username": username, "password": password})
-        logging.info("{} {} {}".format(username, password, response.status_code))
+        logging.info(f"{username} {password} {response.status_code}")
         if success_string in response.text:
             print("cracked!", username, password)
             break

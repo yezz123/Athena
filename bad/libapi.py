@@ -16,7 +16,7 @@ def keygen(username, password=None):
         print("removing", f)
         f.unlink()
 
-    keyfile = "/tmp/Athena.apikey.{}.{}".format(username, key)
+    keyfile = f"/tmp/Athena.apikey.{username}.{key}"
 
     Path(keyfile).touch()
 

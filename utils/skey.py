@@ -17,7 +17,7 @@ for _ in range(OTPNUM):
     otps.append(lastkey)
 
 for i, otp in enumerate(reversed(otps)):
-    print("{:>4} {}".format(i, otp))
+    print(f"{i:>4} {otp}")
 
 while True:
     while True:

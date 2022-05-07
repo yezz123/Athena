@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import binascii
 import sys
 from binascii import unhexlify

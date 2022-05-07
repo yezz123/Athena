@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import subprocess
 import sys
 
@@ -20,5 +18,5 @@ passwords = [
 for password in passwords:
     result = subprocess.run([program, username, password], stdout=subprocess.DEVNULL)
     if result.returncode == 0:
-        print("cracked! user: {} password: {}".format(username, password))
+        print(f"cracked! user: {username} password: {password}")
         break

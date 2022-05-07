@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import libsession
 from flask import Flask, g, redirect, request
 from mod_hello import mod_hello

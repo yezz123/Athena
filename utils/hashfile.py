@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from binascii import hexlify
 
 import click
@@ -16,7 +14,7 @@ def hashfile(input_file):
     digest.update(data)
     hexdigest = hexlify(digest.finalize()).decode()
 
-    print("{:<12} {}".format("sha512", hexdigest))
+    print(f"{'sha512':<12} {hexdigest}")
 
 
 if __name__ == "__main__":

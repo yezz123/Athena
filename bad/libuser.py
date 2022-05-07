@@ -9,9 +9,7 @@ def login(username, password):
     c = conn.cursor()
 
     user = c.execute(
-        "SELECT * FROM users WHERE username = '{}' and password = '{}'".format(
-            username, password
-        )
+        f"SELECT * FROM users WHERE username = '{username}' and password = '{password}'"
     ).fetchone()
 
     if user:
@@ -57,9 +55,7 @@ def password_change(username, password):
     c = conn.cursor()
 
     c.execute(
-        "UPDATE users SET password = '{}' WHERE username = '{}'".format(
-            password, username
-        )
+        f"UPDATE users SET password = '{password}' WHERE username = '{username}'"
     )
     conn.commit()
 

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import hashlib
 
 import click
@@ -11,7 +9,7 @@ import click
 def crack_cvv(algorithm, digest):
 
     for number in range(1000):
-        cvv = "{:03}".format(number).encode()
+        cvv = f"{number:03}".encode()
         result = hashlib.new(algorithm, cvv).hexdigest()
         if digest == result:
             print("Cracked! CVV:", cvv.decode())

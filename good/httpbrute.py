@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import requests
 
 URL = "http://127.0.1.1:5000/user/login"
