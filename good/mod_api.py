@@ -18,7 +18,9 @@ key_schema = {
 post_schema = {
     "type": "object",
     "required": ["text"],
-    "properties": {"text": {"type": "string"},},
+    "properties": {
+        "text": {"type": "string"},
+    },
     "additionalProperties": False,
 }
 

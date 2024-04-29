@@ -17,7 +17,7 @@ except binascii.Error:
 
 backend = default_backend()
 
-kdf = Scrypt(salt=salt, length=32, n=2 ** 14, r=8, p=1, backend=backend)
+kdf = Scrypt(salt=salt, length=32, n=2**14, r=8, p=1, backend=backend)
 
 try:
     kdf.verify(password, key)

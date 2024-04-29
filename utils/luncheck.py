@@ -1,5 +1,5 @@
 def luhnCheck(card_number):
-    """ checks to make sure that the card passes a luhn mod-10 checksum """
+    """checks to make sure that the card passes a luhn mod-10 checksum"""
 
     sum = 0
     num_digits = len(card_number)

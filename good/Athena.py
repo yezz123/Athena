@@ -10,9 +10,9 @@ from mod_posts import mod_posts
 from mod_user import mod_user
 
 app = Flask("Athena")
-app.config[
-    "SECRET_KEY"
-] = "123aa8a93bdde342c871564a62282af857bda14b3359fde95d0c5e4b321610c1"
+app.config["SECRET_KEY"] = (
+    "123aa8a93bdde342c871564a62282af857bda14b3359fde95d0c5e4b321610c1"
+)
 
 app.register_blueprint(mod_hello, url_prefix="/hello")
 app.register_blueprint(mod_user, url_prefix="/user")

@@ -13,7 +13,7 @@ def scrypt_generate(message):
     backend = default_backend()
     salt = os.urandom(16)
 
-    kdf = Scrypt(salt=salt, length=32, n=2 ** 14, r=8, p=1, backend=backend)
+    kdf = Scrypt(salt=salt, length=32, n=2**14, r=8, p=1, backend=backend)
 
     key = kdf.derive(message.encode())
 

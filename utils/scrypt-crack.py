@@ -24,7 +24,7 @@ def crack_scrypt(key, salt):
 
     for number in range(10000):
 
-        kdf = Scrypt(salt=salt, length=32, n=2 ** 14, r=8, p=1, backend=backend)
+        kdf = Scrypt(salt=salt, length=32, n=2**14, r=8, p=1, backend=backend)
 
         try:
             kdf.verify(str(number).encode(), key)
