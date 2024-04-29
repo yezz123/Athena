@@ -25,7 +25,7 @@ def login(username, password, **kwargs):
     backend = default_backend()
 
     kdf = Scrypt(
-        salt=unhexlify(user["salt"]), length=32, n=2 ** 14, r=8, p=1, backend=backend
+        salt=unhexlify(user["salt"]), length=32, n=2**14, r=8, p=1, backend=backend
     )
 
     try:
@@ -59,7 +59,7 @@ def password_set(username, password):
     backend = default_backend()
     salt = os.urandom(16)
 
-    kdf = Scrypt(salt=salt, length=32, n=2 ** 14, r=8, p=1, backend=backend)
+    kdf = Scrypt(salt=salt, length=32, n=2**14, r=8, p=1, backend=backend)
 
     key = kdf.derive(password.encode())
 

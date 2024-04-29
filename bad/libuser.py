@@ -54,9 +54,7 @@ def password_change(username, password):
     conn.row_factory = sqlite3.Row
     c = conn.cursor()
 
-    c.execute(
-        f"UPDATE users SET password = '{password}' WHERE username = '{username}'"
-    )
+    c.execute(f"UPDATE users SET password = '{password}' WHERE username = '{username}'")
     conn.commit()
 
     return True

@@ -8,13 +8,18 @@ mod_api = Blueprint("mod_api", __name__, template_folder="templates")
 key_schema = {
     "type": "object",
     "required": ["username", "password"],
-    "properties": {"username": {"type": "string"}, "password": {"type": "string"},},
+    "properties": {
+        "username": {"type": "string"},
+        "password": {"type": "string"},
+    },
 }
 
 post_schema = {
     "type": "object",
     "required": ["text"],
-    "properties": {"text": {"type": "string"},},
+    "properties": {
+        "text": {"type": "string"},
+    },
 }
 
 
