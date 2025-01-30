@@ -78,7 +78,7 @@ $ sudo ./install.sh
 # Move to the Bad Directory
 $ cd bad
 # Run the Initialization as Root
-$ sudo ./db_init.py
+$ sudo python ./db_init.py
 ```
 
 - Or :
@@ -87,7 +87,7 @@ $ sudo ./db_init.py
 # Move to the Good Directory
 $ cd good
 # Run the Initialization as Root
-$ sudo ./db_init.py
+$ sudo python ./db_init.py
 ```
 
 ### Running the Application
